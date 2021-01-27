@@ -115,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2332122638849894419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.082, z: 0}
+  m_LocalPosition: {x: 0, y: 1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4165210459345639892}
@@ -239,23 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6448c99d530b9d247ac091434d67d36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdDownStartime: 0
   ThisColudUI: {fileID: 8431193421296943771}
---- !u!114 &4905521630081255534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4865036438441006783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  holdDownStartime: 0
 --- !u!1 &5395780350223339160
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7957163436444910467
 RectTransform:
   m_ObjectHideFlags: 0
