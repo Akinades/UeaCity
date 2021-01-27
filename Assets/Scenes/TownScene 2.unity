@@ -4234,7 +4234,22 @@ PrefabInstance:
     - target: {fileID: 1233694741891813611, guid: bb8a349e47100e3438e3350c256e20e3,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233694741891813611, guid: bb8a349e47100e3438e3350c256e20e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613995033221917586, guid: bb8a349e47100e3438e3350c256e20e3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613995033221917586, guid: bb8a349e47100e3438e3350c256e20e3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2732043988329127880, guid: bb8a349e47100e3438e3350c256e20e3,
         type: 3}
@@ -25948,6 +25963,7 @@ GameObject:
   - component: {fileID: 2039921796}
   - component: {fileID: 2039921795}
   - component: {fileID: 2039921797}
+  - component: {fileID: 2039921798}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25998,9 +26014,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e5c96297baad34382ef5905dda2b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
+  Money: 0
+  Banknote: 0
+  Level: 0
+  Wood: 0
+  Steel: 0
+  Brick: 0
+  Rice: 0
+  Beef: 0
+  Plywood: 0
+  Hammer: 0
+  Book: 0
+  Pencil: 0
+  Ruler: 0
+--- !u!114 &2039921798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039921794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a448ec529dd994497488a400c16b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EverySecond: 100
 --- !u!1001 &2041821698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26883,6 +26922,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2129181637}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2142606396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233694741891813611, guid: bb8a349e47100e3438e3350c256e20e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 388424986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142606401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142606396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e36177cf3cdb845a3015a91074063b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2142606402
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142606396}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2142681173
 GameObject:
   m_ObjectHideFlags: 0

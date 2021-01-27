@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class GameApplicationManager : MonoBehaviour
 {
-    public int A;
-    public int B;
-    public int C;
-    
+ [Header("Currency")]
+    public int Money;
+    public int Banknote;
+[Header("Player status")]
+    private int Fanciness;// 10-500
+    protected float Exp;
+    public int Level;
+[Header("Material")]    
+    public int Wood;
+    public int Steel;
+    public int Brick;
+    public int Rice;
+    public int Beef;
+    public int Plywood;
+    public int Hammer;
+    public int Book;
+    public int Pencil;
+    public int Ruler;
     // Start is called before the first frame update
    void Start()
     {
-       
-
+        //Frist not 
+      Money=1000000;
+      Fanciness=10;
+      Level=1;
     }
     static public GameApplicationManager Instance
 
@@ -51,4 +67,34 @@ public class GameApplicationManager : MonoBehaviour
     {
         
     }
+
+    // Variables 
+    public void addmoney(int value) {
+         Money+=value;
+         Debug.Log("Now Money =" + Money);
+}
+public void reducemoney(int value) {
+         Money-=value;
+          Debug.Log("Now Money =" + Money);
+}
+  public void reduceBanknote(int value) {
+         Banknote-=value;
+}
+public void addFanciness(int value) {
+         Fanciness+=value;
+
+}
+public void reduceFanciness(int value) {
+         Fanciness-=value;
+}
+public void addExp(float value) {
+         Exp+=value;
+          Debug.Log("Now Exp =" + Exp);
+}
+public void addLevel(int value) {
+         Level+=value;
+          Debug.Log("Now Level =" + Exp);
+}
+
+
 }

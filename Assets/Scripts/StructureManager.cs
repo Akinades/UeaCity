@@ -24,6 +24,9 @@ public class StructureManager : MonoBehaviour
         {
             int randomIndex = GetRandomWeightedIndex(houseWeights);
             placementManager.PlaceObjectOnTheMap(position, housesPrefabe[randomIndex].prefab, CellType.Structure);
+            //add money
+            GameApplicationManager.Instance.addmoney(100);
+            
             AudioPlayer.instance.PlayPlacementSound();
         }
     }

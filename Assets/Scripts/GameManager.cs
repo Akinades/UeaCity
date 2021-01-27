@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void HousePlacementHandler()
     {
+        
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.PlaceHouse;
     }

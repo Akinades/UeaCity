@@ -5,7 +5,7 @@ using UnityEngine;
 public class SystemMakeProblem : MonoBehaviour
 {
      private float time = 0.0f;
- public float interpolationPeriod = 0.1f;
+ public float EverySecond = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,11 @@ public class SystemMakeProblem : MonoBehaviour
     {
           time += Time.deltaTime;
  
-     if (time >= interpolationPeriod) {
+     if (time >= EverySecond) {
          time = 0.0f;
- 
-         Debug.Log("Get Problem every interpolationPeriod seconds");
+         GameApplicationManager.Instance.addmoney(10);
+         GameApplicationManager.Instance.addExp(100);
+         Debug.Log("Get Problem EverySecond ");
      }
     }
 }
