@@ -18,5 +18,6 @@ public class worldUI : MonoBehaviour
     {
        //DebugLog("PP");
         ui.position = camera.WorldToScreenPoint(world.position);
+    
     }
 }
