@@ -7,8 +7,9 @@ public class GameApplicationManager : MonoBehaviour
  [Header("Currency")]
     public int Money;
     public int Banknote;
-[Header("Player status")]
     private int Fanciness;// 10-500
+    private int People;
+[Header("Player status")]
     protected float Exp;
     public int Level;
 [Header("Material")]    
@@ -86,6 +87,13 @@ public void addFanciness(int value) {
 }
 public void reduceFanciness(int value) {
          Fanciness-=value;
+}
+public void addPeople(int value) {
+         People+=value;
+
+}
+public void reducePeople(int value) {
+         People-=value;
 }
 public void addExp(float value) {
          Exp+=value;

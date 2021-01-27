@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnSpecialPlacement += SpecialPlacementHandler;
-        
+        uiController.OnNormal += NormalHandler;
     }
 
     private void SpecialPlacementHandler()
@@ -43,7 +43,10 @@ public class GameManager : MonoBehaviour
         inputManager.OnMouseHold += roadManager.PlaceRoad;
         inputManager.OnMouseUp += roadManager.FinishPlacingRoad;
     }
-
+    private void NormalHandler()
+    {
+        ClearInputActions();
+    }
     private void ClearInputActions()
     {
         inputManager.OnMouseClick = null;
