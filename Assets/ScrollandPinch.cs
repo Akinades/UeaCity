@@ -8,6 +8,7 @@ class ScrollandPinch : MonoBehaviour
     public Camera Camera;
     public bool Rotate;
     protected Plane Plane;
+    public float speed = 1.0f; 
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ class ScrollandPinch : MonoBehaviour
 
         //Update Plane
         if (Input.touchCount >= 1)
-            Plane.SetNormalAndPosition(transform.up, transform.position);
+            Plane.SetNormalAndPosition(transform.up, transform.position * speed);
 
         var Delta1 = Vector3.zero;
         var Delta2 = Vector3.zero;
@@ -30,16 +31,16 @@ class ScrollandPinch : MonoBehaviour
         {
             Delta1 = PlanePositionDelta(Input.GetTouch(0));
             if (Input.GetTouch(0).phase == TouchPhase.Moved)
-                Camera.transform.Translate(Delta1, Space.World);
+                Camera.transform.Translate(Delta1 *speed, Space.World);
         }
 
         //Pinch
         if (Input.touchCount >= 2)
         {
-            var pos1 = PlanePosition(Input.GetTouch(0).position);
-            var pos2 = PlanePosition(Input.GetTouch(1).position);
-            var pos1b = PlanePosition(Input.GetTouch(0).position - Input.GetTouch(0).deltaPosition);
-            var pos2b = PlanePosition(Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition);
+            var pos1 = PlanePosition(Input.GetTouch(0).position );
+            var pos2 = PlanePosition(Input.GetTouch(1).position );
+            var pos1b = PlanePosition(Input.GetTouch(0).position - Input.GetTouch(0).deltaPosition );
+            var pos2b = PlanePosition(Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition );
 
             //calc zoom
             var zoom = Vector3.Distance(pos1, pos2) /
@@ -50,7 +51,7 @@ class ScrollandPinch : MonoBehaviour
                 return;
 
             //Move cam amount the mid ray
-            Camera.transform.position = Vector3.LerpUnclamped(pos1, Camera.transform.position, 1 / zoom);
+            Camera.transform.position = Vector3.LerpUnclamped(pos1, Camera.transform.position, 1 / zoom );
 
             if (Rotate && pos2b != pos2)
                 Camera.transform.RotateAround(pos1, Plane.normal, Vector3.SignedAngle(pos2 - pos1, pos2b - pos1b, Plane.normal));
