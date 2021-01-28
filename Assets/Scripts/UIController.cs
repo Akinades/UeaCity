@@ -84,7 +84,6 @@ public class UIController : MonoBehaviour
         outline.effectColor = outlineColor;
         outline.enabled = true;
     }
-
     private void ResetButtonColor()
     {
         foreach (Button button in buttonList)

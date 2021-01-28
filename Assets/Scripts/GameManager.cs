@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         uiController.OnServicePlacement += ServicePlacementHandler;
         uiController.OnParkPlacement += ParkPlacementHandler; 
         uiController.OnNormal += NormalHandler;
+      // HoldBuilding();
     }
     private void FixedUpdate()
     {
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
         CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeHouse;
+      
        
     }
 
@@ -93,9 +95,30 @@ public class GameManager : MonoBehaviour
         inputManager.OnMouseHold = null;
         inputManager.OnMouseUp = null;
     }
-
-    private void Update()
+   
+     void Update()
     {
         cameraMovement.MoveCamera(new Vector3(inputManager.CameraMovementVector.x,0, inputManager.CameraMovementVector.y));
+
+        if (Input.GetMouseButtonDown(0))
+                  {
+                      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                      RaycastHit hit;
+                      
+                     
+                      
+                      if (Physics.Raycast(ray, out hit))
+                      {
+                          if (hit.transform.tag == "Building")
+                          {
+                              Debug.Log("+");
+                          }
+                          
+                          
+                      }
+                  }
     }
+    //  private void HoldBuilding(){
+    //        // inputManager.OnMouseHold += structureManager.RemoveStructure;
+    //  }
 }

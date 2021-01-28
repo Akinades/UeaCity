@@ -20,7 +20,12 @@ public class StructureManager : MonoBehaviour
         factoryWeights = FactoryPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         serviceWeights = ServicePrfabe.Select(prefabStats => prefabStats.weight).ToArray();
     }
-
+  public void RemoveStructure(GameObject prefab,Vector3Int position)
+    {
+        placementManager.RemoveObjectOnTheMap(position, CellType.Empty);
+        Destroy(prefab.transform.parent.gameObject);
+ 
+    }
     public void placeService(Vector3Int position)
     {
         if (CheckPositionBeforePlacement(position))
@@ -44,6 +49,10 @@ public class StructureManager : MonoBehaviour
         if (CheckPositionBeforePlacement(position))
         {
             int randomIndex = GetRandomWeightedIndex(houseWeights);
+
+            DestroyObject destroyObject = housesPrefabe[randomIndex].prefab.GetComponent<DestroyObject>();
+            destroyObject.InitialPrefab(this,position);
+
             placementManager.PlaceObjectOnTheMap(position, housesPrefabe[randomIndex].prefab, CellType.Structure);
             //add money
             GameApplicationManager.Instance.addmoney(100);
@@ -70,6 +79,8 @@ public class StructureManager : MonoBehaviour
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
+    
+
 
     private int GetRandomWeightedIndex(float[] weights)
     {

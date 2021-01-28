@@ -8,8 +8,8 @@ public class PlacementManager : MonoBehaviour
     public int width, height;
     Grid placementGrid;
 
-    private Dictionary<Vector3Int, StructureModel> temporaryRoadobjects = new Dictionary<Vector3Int, StructureModel>();
-    private Dictionary<Vector3Int, StructureModel> structureDictionary = new Dictionary<Vector3Int, StructureModel>();
+    public Dictionary<Vector3Int, StructureModel> temporaryRoadobjects = new Dictionary<Vector3Int, StructureModel>();
+    public Dictionary<Vector3Int, StructureModel> structureDictionary = new Dictionary<Vector3Int, StructureModel>();
 
     private void Start()
     {
@@ -32,10 +32,21 @@ public class PlacementManager : MonoBehaviour
 
     internal void PlaceObjectOnTheMap(Vector3Int position, GameObject structurePrefab, CellType type)
     {
+         Debug.Log(placementGrid[position.x, position.z]);
         placementGrid[position.x, position.z] = type;
         StructureModel structure = CreateANewStructureModel(position, structurePrefab, type);
         structureDictionary.Add(position, structure);
+       // Debug.Log(position);
+        //Debug.Log(structureDictionary);
         DestroyNatureAt(position);
+         Debug.Log(placementGrid[position.x, position.z]);
+    }
+    //
+    internal void RemoveObjectOnTheMap(Vector3Int position, CellType type)
+    {
+        placementGrid[position.x, position.z] = type;
+        structureDictionary.Remove(position);
+        Debug.Log(position);
     }
 
     private void DestroyNatureAt(Vector3Int position)

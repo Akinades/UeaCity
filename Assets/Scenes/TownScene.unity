@@ -2070,9 +2070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095d56751c424f24e8ff96d4614118b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
-  Rotate: 1
-  speed: 0.5
 --- !u!1001 &198101604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8299,6 +8296,7 @@ MonoBehaviour:
   placeParkButton: {fileID: 1500827089}
   placeCancelButton: {fileID: 566435344}
   outlineColor: {r: 1, g: 0, b: 0.79446316, a: 1}
+  control: {fileID: 0}
 --- !u!114 &681313530
 MonoBehaviour:
   m_ObjectHideFlags: 0
