@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
     public InputManager inputManager;
 
     public UIController uiController;
-
+    public bool CheckBuilding = true; 
     public StructureManager structureManager;
-
+    public ScrollandPinch scrollandPinch; 
     private void Start()
     {
         uiController.OnRoadPlacement += RoadPlacementHandler;
@@ -24,24 +24,39 @@ public class GameManager : MonoBehaviour
         uiController.OnParkPlacement += ParkPlacementHandler; 
         uiController.OnNormal += NormalHandler;
     }
-
+    private void FixedUpdate()
+    {
+       if(Input.touchCount >=2 || CheckBuilding == true)
+        {
+            ClearInputActions();
+            scrollandPinch.enabled = true;
+        }else
+        {
+            scrollandPinch.enabled = false;
+        }
+    }
     private void ParkPlacementHandler()
     {
+        CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placePark; 
+
     }
     private void ServicePlacementHandler()
     {
+        CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeService;
     }
     private void FactoryPlacementHandler()
     {
+        CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeFactory;
     }
     private void GradenPlacementHandler()
     {
+        CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeGraden;
 
@@ -49,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     private void HousePlacementHandler()
     {
-        
+        CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeHouse;
        
@@ -57,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     private void RoadPlacementHandler()
     {
+        CheckBuilding = false;
         ClearInputActions();
 
         inputManager.OnMouseClick += roadManager.PlaceRoad;

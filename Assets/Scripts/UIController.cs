@@ -8,7 +8,6 @@ public class UIController : MonoBehaviour
 {
     public Action OnRoadPlacement, OnHousePlacement, OnGradenPlacement,OnFactoryPlacement,OnServicePlacement,OnParkPlacement,OnNormal;
     public Button placeRoadButton, placeHouseButton, placeGradenButton,placeFactoryButton,placeServiceButton,placeParkButton,placeCancelButton;
-    public GameObject plane;
     public Color outlineColor;
     List<Button> buttonList;
     
@@ -22,7 +21,7 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeRoadButton);
             OnRoadPlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+           
 
 
         });
@@ -32,7 +31,7 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeHouseButton);
             OnHousePlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+            
         });
 
         //สวนผัก
@@ -41,7 +40,7 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeGradenButton);
             OnGradenPlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+           
         });
         //โรงงาน
         placeFactoryButton.onClick.AddListener(() =>
@@ -49,7 +48,7 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeFactoryButton);
             OnFactoryPlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+            
         });
         //สวัสดิ์การ
         placeServiceButton.onClick.AddListener(() =>
@@ -57,7 +56,7 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeServiceButton);
             OnServicePlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+           
         });
         //สวนสาธารณะ
         placeParkButton.onClick.AddListener(() =>
@@ -65,14 +64,13 @@ public class UIController : MonoBehaviour
             ResetButtonColor();
             ModifyOutline(placeParkButton);
             OnParkPlacement?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = false;
+            
         });
         //ยกเลิกสร้าง
         placeCancelButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
            OnNormal?.Invoke();
-            plane.GetComponent<ScrollandPinch>().enabled = true;
 
 
         });

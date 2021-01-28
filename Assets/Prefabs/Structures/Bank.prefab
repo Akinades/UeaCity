@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1172806515188873859}
+  placementManager: {fileID: 0}
 --- !u!1 &8431193421296943771
 GameObject:
   m_ObjectHideFlags: 0

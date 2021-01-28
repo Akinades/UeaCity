@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class DestroyObject : MonoBehaviour
 {
+    Grid placementGrid;
     public Button yourButton;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +15,11 @@ public class DestroyObject : MonoBehaviour
     }
 
    void TaskOnClick(){
-	Destroy(this.gameObject);
-	}
+        Destroy(gameObject);
+     
+
+
+    }
 
 
 }

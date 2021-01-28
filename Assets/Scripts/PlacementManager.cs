@@ -30,19 +30,12 @@ public class PlacementManager : MonoBehaviour
         return false;
     }
 
-    internal void PlaceObjectOnTheMap(Vector3Int position, GameObject structurePrefab, CellType type, int wight = 1, int height = 1)
+    internal void PlaceObjectOnTheMap(Vector3Int position, GameObject structurePrefab, CellType type)
     {
+        placementGrid[position.x, position.z] = type;
         StructureModel structure = CreateANewStructureModel(position, structurePrefab, type);
-        for (int x = 0; x < width; x++)
-        {
-            for (int z = 0; z < height; z++)
-            {
-                var newPosition = position + new Vector3Int(x, 0, z); 
-            }
-            placementGrid[position.x, position.z] = type;
-            structureDictionary.Add(position, structure);
-            DestroyNatureAt(position);
-        }
+        structureDictionary.Add(position, structure);
+        DestroyNatureAt(position);
     }
 
     private void DestroyNatureAt(Vector3Int position)
