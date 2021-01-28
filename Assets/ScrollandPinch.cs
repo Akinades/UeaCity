@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class ScrollandPinch : MonoBehaviour
+public class ScrollandPinch : MonoBehaviour
 {
 #if UNITY_IOS || UNITY_ANDROID
     public Camera Camera;

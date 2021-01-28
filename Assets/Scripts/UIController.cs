@@ -6,41 +6,51 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public Action OnRoadPlacement, OnHousePlacement, OnSpecialPlacement,OnNormal;
-    public Button placeRoadButton, placeHouseButton, placeSpecialButton,placeCancelButton;
-
+    public Action OnRoadPlacement, OnHousePlacement, OnGradenPlacement,OnFactoryPlacement,OnServicePlacement,OnParkPlacement,OnNormal;
+    public Button placeRoadButton, placeHouseButton, placeGradenButton,placeFactoryButton,placeServiceButton,placParkButton,placeCancelButton;
+    public GameObject plane;
     public Color outlineColor;
     List<Button> buttonList;
-
+    
     private void Start()
     {
-        buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeSpecialButton };
-
+        buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeGradenButton };
+        
+        //ถนน
         placeRoadButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
             ModifyOutline(placeRoadButton);
             OnRoadPlacement?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = false;
+
 
         });
+        //บ้าน
         placeHouseButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
             ModifyOutline(placeHouseButton);
             OnHousePlacement?.Invoke();
-
+            plane.GetComponent<ScrollandPinch>().enabled = false;
         });
-        placeSpecialButton.onClick.AddListener(() =>
+
+        //สวนผัก
+        placeGradenButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
-            ModifyOutline(placeSpecialButton);
-            OnSpecialPlacement?.Invoke();
-
+            ModifyOutline(placeGradenButton);
+            OnGradenPlacement?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = false;
         });
+
+        //ยกเลิกสร้าง
            placeCancelButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
            OnNormal?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = true;
+
 
         });
     }

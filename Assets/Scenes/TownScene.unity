@@ -436,6 +436,32 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1097829029420992241, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -797868696417992452, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8688426342037257931, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6682183204314837099, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4658018835304741711, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 390797519350753087, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2055174935784068685, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6874033578769323579, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4402624881875150330, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -246408453674686131, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6587993799012714164, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2073791987078627134, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 1621868757}
   m_ExposedReferences:
     m_References:
     - 68ede49f1fe4f2340a00aa2b62e79060: {fileID: 1621868754}
@@ -2028,6 +2054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095d56751c424f24e8ff96d4614118b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  Rotate: 1
+  speed: 0.5
 --- !u!1001 &198101604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6903,6 +6932,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1543573717}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2029494325}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &566435345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6992,6 +7043,8 @@ PlayableDirector:
   - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
   - key: {fileID: -2073791987078627134, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -8220,6 +8273,7 @@ MonoBehaviour:
   placeHouseButton: {fileID: 1325324658}
   placeSpecialButton: {fileID: 1405492519}
   placeCancelButton: {fileID: 566435344}
+  plane: {fileID: 185400025}
   outlineColor: {r: 0.8931636, g: 0.0047169924, b: 1, a: 1}
 --- !u!114 &681313530
 MonoBehaviour:
@@ -20709,6 +20763,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &1543573720
@@ -21545,6 +21601,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &1583901480
@@ -21933,6 +21991,50 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 25753829}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 84905625}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 991203166}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2105590681}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1294964616}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -26940,6 +27042,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 68ede49f1fe4f2340a00aa2b62e79060: {fileID: 1621868754}
@@ -28219,6 +28323,12 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6874033578769323579, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6587993799012714164, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &1985779933
@@ -28792,6 +28902,8 @@ PlayableDirector:
     value: {fileID: 1664144542}
   - key: {fileID: 1890582873281788741, guid: d20bd661abd5989448842bdae636adc7, type: 2}
     value: {fileID: 1254589152}
+  - key: {fileID: 7216635766282532453, guid: d20bd661abd5989448842bdae636adc7, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &2029494328

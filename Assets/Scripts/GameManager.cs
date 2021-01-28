@@ -18,21 +18,40 @@ public class GameManager : MonoBehaviour
     {
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
-        uiController.OnSpecialPlacement += SpecialPlacementHandler;
+        uiController.OnGradenPlacement += GradenPlacementHandler;
+        uiController.OnFactoryPlacement += FactoryPlacementHandler;
+        uiController.OnServicePlacement += ServicePlacementHandler;
+        uiController.OnParkPlacement += ParkPlacementHandler; 
         uiController.OnNormal += NormalHandler;
     }
 
-    private void SpecialPlacementHandler()
+    private void ParkPlacementHandler()
     {
         ClearInputActions();
-        inputManager.OnMouseClick += structureManager.PlaceSpecial;
+        inputManager.OnMouseClick += structureManager.placePark; 
+    }
+    private void ServicePlacementHandler()
+    {
+        ClearInputActions();
+        inputManager.OnMouseClick += structureManager.placeService;
+    }
+    private void FactoryPlacementHandler()
+    {
+        ClearInputActions();
+        inputManager.OnMouseClick += structureManager.placeFactory;
+    }
+    private void GradenPlacementHandler()
+    {
+        ClearInputActions();
+        inputManager.OnMouseClick += structureManager.placeGraden;
     }
 
     private void HousePlacementHandler()
     {
         
         ClearInputActions();
-        inputManager.OnMouseClick += structureManager.PlaceHouse;
+        inputManager.OnMouseClick += structureManager.placeHouse;
+       
     }
 
     private void RoadPlacementHandler()

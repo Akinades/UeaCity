@@ -7,18 +7,39 @@ using UnityEngine;
 
 public class StructureManager : MonoBehaviour
 {
-    public StructurePrefabWeighted[] housesPrefabe, specialPrefabs;
+    public StructurePrefabWeighted[] housesPrefabe, GradenPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
     public PlacementManager placementManager;
 
-    private float[] houseWeights, specialWeights;
+    private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
 
     private void Start()
     {
         houseWeights = housesPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
-        specialWeights = specialPrefabs.Select(prefabStats => prefabStats.weight).ToArray();
+        gradenWeights = GradenPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
+        parkWeights = ParkPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
+        factoryWeights = FactoryPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
+        serviceWeights = ServicePrfabe.Select(prefabStats => prefabStats.weight).ToArray();
     }
 
-    public void PlaceHouse(Vector3Int position)
+    public void placeService(Vector3Int position)
+    {
+        if (CheckPositionBeforePlacement(position))
+        {
+            int randomIndex = GetRandomWeightedIndex(serviceWeights);
+            placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[randomIndex].prefab, CellType.Structure);
+            AudioPlayer.instance.PlayPlacementSound();
+        }
+    }
+    public void placeFactory(Vector3Int position)
+    {
+        if (CheckPositionBeforePlacement(position))
+        {
+            int randomIndex = GetRandomWeightedIndex(factoryWeights);
+            placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[randomIndex].prefab, CellType.Structure);
+            AudioPlayer.instance.PlayPlacementSound();
+        }
+    }
+    public void placeHouse(Vector3Int position)
     {
         if (CheckPositionBeforePlacement(position))
         {
@@ -31,12 +52,21 @@ public class StructureManager : MonoBehaviour
         }
     }
 
-    public void PlaceSpecial(Vector3Int position)
+    public void placeGraden(Vector3Int position)
     {
         if (CheckPositionBeforePlacement(position))
         {
-            int randomIndex = GetRandomWeightedIndex(specialWeights);
-            placementManager.PlaceObjectOnTheMap(position, specialPrefabs[randomIndex].prefab, CellType.Structure);
+            int randomIndex = GetRandomWeightedIndex(gradenWeights);
+            placementManager.PlaceObjectOnTheMap(position, GradenPrefabe[randomIndex].prefab, CellType.Structure);
+            AudioPlayer.instance.PlayPlacementSound();
+        }
+    }
+    public void placePark(Vector3Int position)
+    {
+        if (CheckPositionBeforePlacement(position))
+        {
+            int randomIndex = GetRandomWeightedIndex(parkWeights);
+            placementManager.PlaceObjectOnTheMap(position, ParkPrefabe[randomIndex].prefab, CellType.Structure);
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
