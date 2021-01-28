@@ -8,8 +8,8 @@ public class ScrollandPinch : MonoBehaviour
     public Camera Camera;
     public bool Rotate;
     protected Plane Plane;
-    public float speed = 1.0f; 
-
+    public float speed = 1.0f;
+    
     private void Awake()
     {
         if (Camera == null)
@@ -43,11 +43,14 @@ public class ScrollandPinch : MonoBehaviour
             var pos2b = PlanePosition(Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition );
 
             //calc zoom
-            var zoom = Vector3.Distance(pos1, pos2) /
-                       Vector3.Distance(pos1b, pos2b);
+            var zoom = Vector3.Distance(pos1, pos2) / Vector3.Distance(pos1b, pos2b);
+            if(Camera.fieldOfView == 5)
+            {
+                zoom = Vector3.Distance(pos1 - pos1b, pos2 - pos2b); 
+            }
 
             //edge case
-            if (zoom == 0 || zoom > 10)
+            if (zoom == 5 || zoom > 10)
                 return;
 
             //Move cam amount the mid ray

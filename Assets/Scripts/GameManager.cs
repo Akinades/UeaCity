@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour
         {
             scrollandPinch.enabled = false;
         }
+       if(CheckBuilding == true)
+        {
+            scrollandPinch.enabled = true;
+        }
     }
     private void ParkPlacementHandler()
     {

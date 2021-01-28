@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     public Action OnRoadPlacement, OnHousePlacement, OnGradenPlacement,OnFactoryPlacement,OnServicePlacement,OnParkPlacement,OnNormal;
     public Button placeRoadButton, placeHouseButton, placeGradenButton,placeFactoryButton,placeServiceButton,placeParkButton,placeCancelButton;
     public Color outlineColor;
+    public GameManager control; 
     List<Button> buttonList;
     
     private void Start()
@@ -71,6 +72,7 @@ public class UIController : MonoBehaviour
         {
             ResetButtonColor();
            OnNormal?.Invoke();
+            control.CheckBuilding = true; 
 
 
         });
