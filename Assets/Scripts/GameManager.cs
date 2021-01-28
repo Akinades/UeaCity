@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeGraden;
+
     }
 
     private void HousePlacementHandler()

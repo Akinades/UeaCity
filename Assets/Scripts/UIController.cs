@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Action OnRoadPlacement, OnHousePlacement, OnGradenPlacement,OnFactoryPlacement,OnServicePlacement,OnParkPlacement,OnNormal;
-    public Button placeRoadButton, placeHouseButton, placeGradenButton,placeFactoryButton,placeServiceButton,placParkButton,placeCancelButton;
+    public Button placeRoadButton, placeHouseButton, placeGradenButton,placeFactoryButton,placeServiceButton,placeParkButton,placeCancelButton;
     public GameObject plane;
     public Color outlineColor;
     List<Button> buttonList;
     
     private void Start()
     {
-        buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeGradenButton };
+        buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeGradenButton, placeFactoryButton,placeServiceButton, placeParkButton };
         
         //ถนน
         placeRoadButton.onClick.AddListener(() =>
@@ -43,9 +43,32 @@ public class UIController : MonoBehaviour
             OnGradenPlacement?.Invoke();
             plane.GetComponent<ScrollandPinch>().enabled = false;
         });
-
+        //โรงงาน
+        placeFactoryButton.onClick.AddListener(() =>
+        {
+            ResetButtonColor();
+            ModifyOutline(placeFactoryButton);
+            OnFactoryPlacement?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = false;
+        });
+        //สวัสดิ์การ
+        placeServiceButton.onClick.AddListener(() =>
+        {
+            ResetButtonColor();
+            ModifyOutline(placeServiceButton);
+            OnServicePlacement?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = false;
+        });
+        //สวนสาธารณะ
+        placeParkButton.onClick.AddListener(() =>
+        {
+            ResetButtonColor();
+            ModifyOutline(placeParkButton);
+            OnParkPlacement?.Invoke();
+            plane.GetComponent<ScrollandPinch>().enabled = false;
+        });
         //ยกเลิกสร้าง
-           placeCancelButton.onClick.AddListener(() =>
+        placeCancelButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
            OnNormal?.Invoke();

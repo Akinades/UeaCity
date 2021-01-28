@@ -34,8 +34,10 @@ public class StructureManager : MonoBehaviour
     {
         if (CheckPositionBeforePlacement(position))
         {
+            int height = 2;
+            int width = 2;
             int randomIndex = GetRandomWeightedIndex(factoryWeights);
-            placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[randomIndex].prefab, CellType.Structure);
+            placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[randomIndex].prefab, CellType.Structure,width,height);
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
