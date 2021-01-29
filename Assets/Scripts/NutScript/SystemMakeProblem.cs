@@ -6,6 +6,8 @@ public class SystemMakeProblem : MonoBehaviour
 {
      private float time = 0.0f;
  public float EverySecond = 10.0f;
+ public GameObject UIBigEvent;
+ public BigEvent bigevent;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +21,11 @@ public class SystemMakeProblem : MonoBehaviour
  
      if (time >= EverySecond) {
          time = 0.0f;
-         GameApplicationManager.Instance.addmoney(10);
-         GameApplicationManager.Instance.addExp(100);
+         //GameApplicationManager.Instance.addmoney(10);
+        // GameApplicationManager.Instance.addExp(100);
          Debug.Log("Get Problem EverySecond ");
+         UIBigEvent.SetActive(true);
+         bigevent.SetQuestion(Random.Range(0,5));
      }
     }
 }
