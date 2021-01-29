@@ -9,7 +9,7 @@ public class StructureManager : MonoBehaviour
 {
     public StructurePrefabWeighted[] housesPrefabe, GradenPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
     public PlacementManager placementManager;
-
+    public UIController uIController;
     private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
 
     private void Start()
@@ -31,15 +31,37 @@ public class StructureManager : MonoBehaviour
         if (CheckPositionBeforePlacement(position))
         {
             int randomIndex = GetRandomWeightedIndex(serviceWeights);
-            placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[randomIndex].prefab, CellType.Structure);
+            if(uIController.OderService == 1 )
+            {
+                placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[0].prefab, CellType.Structure);
+               
+            }
+            if (uIController.OderService == 2)
+            {
+                placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[1].prefab, CellType.Structure);
+
+            }
             AudioPlayer.instance.PlayPlacementSound();
         }
+            
     }
     public void placeFactory(Vector3Int position)
     {
         if (CheckPositionBeforePlacement(position))
         {
             int randomIndex = GetRandomWeightedIndex(factoryWeights);
+            if (uIController.OderFactory == 1 )
+            {
+                placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
+            }
+            if (uIController.OderFactory == 2)
+            {
+                placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[1].prefab, CellType.Structure);
+            }
+            if (uIController.OderFactory == 3)
+            {
+                placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[2].prefab, CellType.Structure);
+            }
             placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[randomIndex].prefab, CellType.Structure);
             AudioPlayer.instance.PlayPlacementSound();
         }

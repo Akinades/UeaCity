@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnGradenPlacement += GradenPlacementHandler;
         uiController.OnFactoryPlacement += FactoryPlacementHandler;
+        uiController.OnFactoryPlacement_2+= FactoryPlacementHandler;
+        uiController.OnFactoryPlacement_3+= FactoryPlacementHandler;
         uiController.OnServicePlacement += ServicePlacementHandler;
+        uiController.OnServicePlacement_2+= ServicePlacementHandler;
         uiController.OnParkPlacement += ParkPlacementHandler; 
         uiController.OnNormal += NormalHandler;
     }
