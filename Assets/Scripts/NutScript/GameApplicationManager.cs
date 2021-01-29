@@ -13,16 +13,16 @@ public class GameApplicationManager : MonoBehaviour
     protected float Exp;
     public int Level;
 [Header("Material")]    
-    public int Wood;
-    public int Steel;
-    public int Brick;
-    public int Rice;
-    public int Beef;
-    public int Plywood;
-    public int Hammer;
-    public int Book;
-    public int Pencil;
-    public int Ruler;
+    public Item Wood;
+    public Item Steel;
+    public Item Brick;
+    public Item Rice;
+    public Item Beef;
+    public Item Plywood;
+    public Item Hammer;
+    public Item Book;
+    public Item Pencil;
+    public Item Ruler;
     [Header("Sturcture Level")]
     public int house = 1;
     public int Factory_1 =1;

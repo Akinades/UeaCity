@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: rice
   m_EditorClassIdentifier: 
   name: rice
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 23b338d6f66bd6f4a9c69b2dfc0ad1bf, type: 3}
   count: 0
