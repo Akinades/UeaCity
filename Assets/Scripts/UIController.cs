@@ -71,8 +71,8 @@ public class UIController : MonoBehaviour
         placeCancelButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
-           OnNormal?.Invoke();
-            control.CheckBuilding = true; 
+            OnNormal?.Invoke();
+           // control.CheckBuilding = true; 
 
 
         });

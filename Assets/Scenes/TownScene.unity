@@ -29174,6 +29174,7 @@ MonoBehaviour:
   CheckBuilding: 1
   structureManager: {fileID: 1063276524}
   scrollandPinch: {fileID: 185400030}
+  holdDownStartime: 0
 --- !u!4 &2039921796
 Transform:
   m_ObjectHideFlags: 0

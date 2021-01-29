@@ -32,14 +32,12 @@ public class PlacementManager : MonoBehaviour
 
     internal void PlaceObjectOnTheMap(Vector3Int position, GameObject structurePrefab, CellType type)
     {
-         Debug.Log(placementGrid[position.x, position.z]);
+         //Debug.Log(placementGrid[position.x, position.z]);
         placementGrid[position.x, position.z] = type;
         StructureModel structure = CreateANewStructureModel(position, structurePrefab, type);
         structureDictionary.Add(position, structure);
-       // Debug.Log(position);
-        //Debug.Log(structureDictionary);
         DestroyNatureAt(position);
-         Debug.Log(placementGrid[position.x, position.z]);
+         //Debug.Log(placementGrid[position.x, position.z]);
     }
     //
     internal void RemoveObjectOnTheMap(Vector3Int position, CellType type)

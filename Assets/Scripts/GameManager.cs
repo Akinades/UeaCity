@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public bool CheckBuilding = true; 
     public StructureManager structureManager;
     public ScrollandPinch scrollandPinch; 
+
+    public float holdDownStartime = 0; 
     private void Start()
     {
         uiController.OnRoadPlacement += RoadPlacementHandler;
@@ -23,7 +25,6 @@ public class GameManager : MonoBehaviour
         uiController.OnServicePlacement += ServicePlacementHandler;
         uiController.OnParkPlacement += ParkPlacementHandler; 
         uiController.OnNormal += NormalHandler;
-      // HoldBuilding();
     }
     private void FixedUpdate()
     {
@@ -45,7 +46,6 @@ public class GameManager : MonoBehaviour
         CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placePark; 
-
     }
     private void ServicePlacementHandler()
     {
@@ -72,8 +72,6 @@ public class GameManager : MonoBehaviour
         CheckBuilding = false;
         ClearInputActions();
         inputManager.OnMouseClick += structureManager.placeHouse;
-      
-       
     }
 
     private void RoadPlacementHandler()
@@ -99,26 +97,6 @@ public class GameManager : MonoBehaviour
      void Update()
     {
         cameraMovement.MoveCamera(new Vector3(inputManager.CameraMovementVector.x,0, inputManager.CameraMovementVector.y));
-
-        if (Input.GetMouseButtonDown(0))
-                  {
-                      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                      RaycastHit hit;
-                      
-                     
-                      
-                      if (Physics.Raycast(ray, out hit))
-                      {
-                          if (hit.transform.tag == "Building")
-                          {
-                              Debug.Log("+");
-                          }
-                          
-                          
-                      }
-                  }
     }
-    //  private void HoldBuilding(){
-    //        // inputManager.OnMouseHold += structureManager.RemoveStructure;
-    //  }
+ 
 }

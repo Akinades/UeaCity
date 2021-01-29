@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildingObject : MonoBehaviour
 {
     public GameObject ThisColudUI;
-     public float holdDownStartime = 0; 
+      public float holdDownStartime = 0;
     void Start()
     {
 holdDownStartime=0;
