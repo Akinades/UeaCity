@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameApplicationManager : MonoBehaviour
 {
  [Header("Currency")]
-    public int Money;
+    public static int  Money = 10000;
     public int Banknote;
     private int Fanciness;// 10-500
     private int People;
@@ -23,11 +23,21 @@ public class GameApplicationManager : MonoBehaviour
     public int Book;
     public int Pencil;
     public int Ruler;
+    [Header("Sturcture Level")]
+    public int house = 1;
+    public int Factory_1 =1;
+    public int Factory_2 =1;
+    public int Factory_3 =1 ;
+    public int Park =1;
+    public int Garden =1 ;
+    public int Service_1 = 1;
+    public int Service_2 =1 ;
+
     // Start is called before the first frame update
-   void Start()
+    void Start()
     {
         //Frist not 
-      Money=1000000;
+     // Money=1000000;
       Fanciness=10;
       Level=1;
     }
@@ -90,6 +100,7 @@ public void reduceFanciness(int value) {
 }
 public void addPeople(int value) {
          People+=value;
+        Debug.Log("People : " + People);
 
 }
 public void reducePeople(int value) {
@@ -104,5 +115,50 @@ public void addLevel(int value) {
           Debug.Log("Now Level =" + Exp);
 }
 
-
+    // Structure Level 
+    //House
+    public void AddLevelHouse(int value)
+    {
+        house += value;
+        Debug.Log("House LV. =" + house);
+    }
+    //Factory
+    public void AddLevelFactory_1(int value)
+    {
+        Factory_1 += value;
+        Debug.Log("Factory_1 Lv. =" + Factory_1);
+    }
+    public void AddLevelFactory_2(int value)
+    {
+        Factory_2 += value;
+        Debug.Log("Factory_2 Lv. =" + Factory_2);
+    }
+    public void AddLevelFactory_3(int value)
+    {
+        Factory_3 += value;
+        Debug.Log("Factory_3 Lv. =" + Factory_3);
+    }
+    //Garden
+    public void AddLevelGarden(int value)
+    {
+        Garden += value;
+        Debug.Log("Garden Lv. =" + Garden);
+    }
+    //Park
+    public void AddLevelPark(int value)
+    {
+        Park += value;
+        Debug.Log("Park Lv. =" + Park);
+    }
+    //Service
+    public void AddLevelService_1(int value)
+    {
+        Service_1 += value;
+        Debug.Log("Service_1 Lv. =" + Service_1);
+    }
+    public void AddLevelService_2(int value)
+    {
+        Service_2 += value;
+        Debug.Log("Service_2" + Service_2);
+    }
 }
