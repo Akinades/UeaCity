@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2078476546293036493}
   - component: {fileID: 2078476546293036494}
   - component: {fileID: 2078476546293036495}
+  - component: {fileID: 3737734800253699445}
   m_Layer: 5
   m_Name: SlotButton
   m_TagString: Untagged
@@ -120,6 +121,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3737734800253699445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078476546293036481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b78e565b5f15724e94911c6db6b7cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countItem: 0
+  countText: {fileID: 5589754692615173445}
+  icon: {fileID: 2078476546460040891}
 --- !u!1 &2078476546460040893
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +222,7 @@ GameObject:
   - component: {fileID: 1385043687891373861}
   - component: {fileID: 5589754692615173445}
   m_Layer: 5
-  m_Name: count
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

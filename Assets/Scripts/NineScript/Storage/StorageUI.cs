@@ -12,17 +12,28 @@ public class StorageUI : MonoBehaviour
 
     void Start()
     {
+        storage = StorageSystem.instance;
+        storage.OnItemChanagedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<ItemSlot>();
-    }
 
-    void CloseStorage()
-    {
-        this.gameObject.SetActive(false);
+        UpdateUI();
     }
-
-    void OpenStorage()
+    
+    void UpdateUI()
     {
-        this.gameObject.SetActive(true);
+        for (int i = 0; i < slots.Length;i++)
+        {
+            if( i < storage.items.Count)
+            {
+                slots[i].gameObject.SetActive(true);
+                slots[i].AddItem(storage.items[i]);
+            }
+            else
+            {
+                slots[i].ClearSlot();
+                slots[i].gameObject.SetActive(false);
+            }
+        }
     }
 }

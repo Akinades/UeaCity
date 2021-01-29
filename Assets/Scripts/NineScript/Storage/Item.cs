@@ -7,4 +7,6 @@ public class Item : ScriptableObject
 {
     public string name = "New Item";
     public Sprite icon = null;
+    public int count = 0;
+    
 }

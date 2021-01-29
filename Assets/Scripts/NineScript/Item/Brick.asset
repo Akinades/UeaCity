@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf91148fd34dd54299b22ef03ad0c89, type: 3}
-  m_Name: Iron
+  m_Name: Brick
   m_EditorClassIdentifier: 
-  name: Iron
-  icon: {fileID: 0}
+  name: Brick
+  icon: {fileID: 21300000, guid: 06c6ea587847d8a47ac695e0838bdf38, type: 3}
+  count: 3
