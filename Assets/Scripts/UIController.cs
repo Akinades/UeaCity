@@ -94,7 +94,7 @@ public class UIController : MonoBehaviour
         {
             ResetButtonColor();
             OnNormal?.Invoke();
-           // control.CheckBuilding = true; 
+           control.CheckBuilding = true; 
 
 
         });
