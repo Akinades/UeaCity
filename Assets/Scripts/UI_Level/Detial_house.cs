@@ -11,12 +11,12 @@ public class Detial_house : MonoBehaviour
     public Button DeleteButton;
     public Button Uplevel_2;
     public Button Uplevel_3;
+    public Transform cameraZoom, Oldcamera;
     public Vector3Int position;
      Homestate homestate;
     public Text textLevel, textPeople, textElec,textFood,textWater,texthealth, textFanciness, textsecurity, ironneeded;
     public Text[] woodneeded;
     public Item wood ,iron;
-    public Transform cameraZoom , Oldcamera;
 
     
 
@@ -33,6 +33,7 @@ public class Detial_house : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick);
         Uplevel_2.onClick.AddListener(UpgradeLevel_2);
         Uplevel_3.onClick.AddListener(UpgradeLevel_3);
+        
         woodneeded[0].text = " " + wood.count + "/1";
 
 
@@ -118,6 +119,7 @@ public class Detial_house : MonoBehaviour
       
 
     }
+   
 
     // Update is called once per frame
     void Update()
@@ -147,13 +149,9 @@ public class Detial_house : MonoBehaviour
                    
                     Camera.main.transform.position = cameraZoom.position;
                     Camera.main.transform.LookAt(this.gameObject.transform, position);
-                   
+                    Camera.main.transform.rotation = Oldcamera.rotation; 
                     Level_Building.SetActive(true);
 
-                }else
-                {
-                    Camera.main.transform.position = Oldcamera.position;
-                    Camera.main.transform.rotation = Oldcamera.rotation; 
                 }
                
 

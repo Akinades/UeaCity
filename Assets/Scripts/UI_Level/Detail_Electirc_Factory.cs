@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Detail_Electory_Factory : MonoBehaviour
+public class Detail_Electirc_Factory : MonoBehaviour
 {
     public GameObject Level_Building;
     public StructureManager structureManager;
     public Vector3Int position;
     ElericFactorystate elericFactorystate;
     public Button DeleteButton;
-    public Text textElectircDemand, textElcetricCapacity; 
+    public Text textElectircDemand, textElcetricCapacity;
+    public Transform cameraZoom, Oldcamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,9 @@ public class Detail_Electory_Factory : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject)
                 {
-
+                    Camera.main.transform.position = cameraZoom.position;
+                    Camera.main.transform.LookAt(this.gameObject.transform, position);
+                    Camera.main.transform.rotation = Oldcamera.rotation;
                     Level_Building.SetActive(true);
 
                 }
