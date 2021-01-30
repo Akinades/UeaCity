@@ -23,15 +23,7 @@ public class GameApplicationManager : MonoBehaviour
     public Item Book;
     public Item Pencil;
     public Item Ruler;
-    [Header("Sturcture Level")]
-    public int house = 1;
-    public int Factory_1 =1;
-    public int Factory_2 =1;
-    public int Factory_3 =1 ;
-    public int Park =1;
-    public int Garden =1 ;
-    public int Service_1 = 1;
-    public int Service_2 =1 ;
+  
 
 public int houseCount;
 public int SumFanciness;
@@ -124,51 +116,7 @@ public void addLevel(int value) {
           Debug.Log("Now Level =" + Exp);
 }
 
-    // Structure Level 
-    //House
-    public void AddLevelHouse(int value)
-    {
-        house += value;
-        Debug.Log("House LV. =" + house);
-    }
-    //Factory
-    public void AddLevelFactory_1(int value)
-    {
-        Factory_1 += value;
-        Debug.Log("Factory_1 Lv. =" + Factory_1);
-    }
-    public void AddLevelFactory_2(int value)
-    {
-        Factory_2 += value;
-        Debug.Log("Factory_2 Lv. =" + Factory_2);
-    }
-    public void AddLevelFactory_3(int value)
-    {
-        Factory_3 += value;
-        Debug.Log("Factory_3 Lv. =" + Factory_3);
-    }
-    //Garden
-    public void AddLevelGarden(int value)
-    {
-        Garden += value;
-        Debug.Log("Garden Lv. =" + Garden);
-    }
-    //Park
-    public void AddLevelPark(int value)
-    {
-        Park += value;
-        Debug.Log("Park Lv. =" + Park);
-    }
-    //Service
-    public void AddLevelService_1(int value)
-    {
-        Service_1 += value;
-        Debug.Log("Service_1 Lv. =" + Service_1);
-    }
-    public void AddLevelService_2(int value)
-    {
-        Service_2 += value;
-        Debug.Log("Service_2" + Service_2);
+    
     }
 
 
