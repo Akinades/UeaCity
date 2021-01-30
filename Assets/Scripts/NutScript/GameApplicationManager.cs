@@ -28,6 +28,8 @@ public int houseCount;
 public int SumFanciness;
 public int SumElectricpower;
 public int HaveElectricpower;
+public int SumHydroenergy;
+public int HaveHydroenergy;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public int HaveElectricpower;
      // Money=1000000;
      // Fanciness=10;
       Level=1;
+    
     }
     static public GameApplicationManager Instance
 
