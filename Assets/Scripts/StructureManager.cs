@@ -61,6 +61,8 @@ public class StructureManager : MonoBehaviour
             }
             if (uIController.OderFactory == 2)
             {
+                Detail_Water_Factory destroyObject = FactoryPrefabe[1].prefab.GetComponent<Detail_Water_Factory>();
+                destroyObject.InitialPrefab(this, position);
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[1].prefab, CellType.Structure);
               
             }
