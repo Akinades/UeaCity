@@ -31,10 +31,8 @@ public class ItemSlot : MonoBehaviour
 
     void Update()
     {   
-
         countItem = item.count;
         countText.text = countItem.ToString();
-        
     }
     
 }
