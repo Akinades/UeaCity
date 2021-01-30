@@ -134,7 +134,7 @@ public void addLevel(int value) {
          Level+=value;
           Debug.Log("Now Level =" + Exp);
 }
-
+    //test
     
     
 
