@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameApplicationManager : MonoBehaviour
 {
  [Header("Currency")]
-    public static int  Money = 10000;
+    public  int  Money = 10000;
     public int Banknote;
     public int Fanciness;// 10-500
     private int People;
@@ -42,11 +42,7 @@ public int HaveHydroenergy;
      // Fanciness=10;
       Level=1;
         //UI
-        peopleUI.text = "" + People;
-        goldUI.text = "" + Money;
-        happyUI.text = "" + Fanciness;
-        storeUI.text = "" + storeCount+"/50";
-
+        
     }
     static public GameApplicationManager Instance
 
@@ -91,11 +87,17 @@ public int HaveHydroenergy;
       
 
        }
-      
+
+        peopleUI.text = "" + People;
+        goldUI.text = "" + Money;
+        happyUI.text = "" + Fanciness;
+        storeUI.text = "" + storeCount + "/50";
+
+
     }
 
-      
-    
+
+
 
     // Variables 
     public void addmoney(int value) {

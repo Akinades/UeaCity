@@ -52,6 +52,8 @@ public class StructureManager : MonoBehaviour
             //int randomIndex = GetRandomWeightedIndex(factoryWeights);
             if (uIController.OderFactory == 1 )
             {
+                Detail_Electory_Factory destroyObject = FactoryPrefabe[0].prefab.GetComponent<Detail_Electory_Factory>();
+                destroyObject.InitialPrefab(this, position);
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
 
 
