@@ -9,6 +9,7 @@ public class Detail_Factory : MonoBehaviour
 
     public Button hide;
 
+    Item item;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +46,10 @@ public class Detail_Factory : MonoBehaviour
         UIMaterial.localPosition = new Vector3(0, 800, 0);
     }
 
+
+    public void spawn(Item item)
+    {
+        Instantiate(item.Object, this.gameObject.transform.position, Quaternion.identity);
+    }
 
 }

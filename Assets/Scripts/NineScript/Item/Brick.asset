@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Brick
   icon: {fileID: 21300000, guid: f2ec29a69ebc49d4b94876bb70668bc3, type: 3}
   count: 5
+  Object: {fileID: 8919148966920930505, guid: 0c911165a2298ff49b704a052e58c8ec, type: 3}

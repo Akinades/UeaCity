@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Excavator
   icon: {fileID: 21300000, guid: a8cf0ddae9afd2348b158276bd715051, type: 3}
   count: 1
+  Object: {fileID: 108214576143844034, guid: f77e48944ba1a5a4db9c0b04e7e60ae9, type: 3}

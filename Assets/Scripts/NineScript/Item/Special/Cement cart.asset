@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Cement cart
   icon: {fileID: 21300000, guid: 697bed34d24fb35499c4d6c62add688c, type: 3}
   count: 1
+  Object: {fileID: 5801733315476708006, guid: 1c724ae44f1d4c9478aea1d49db6d3c9, type: 3}

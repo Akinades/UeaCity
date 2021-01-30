@@ -12,7 +12,9 @@ public class SlotMaterial : MonoBehaviour
     public Image icon;
 
     public Item item;
-    
+
+    public Detail_Factory Factory;
+
     void Start()
     {
         
@@ -34,6 +36,7 @@ public class SlotMaterial : MonoBehaviour
                 }
                 else
                 {
+                    Factory.spawn(item);
                     ClearSlot();
                 }
                 
