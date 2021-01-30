@@ -2530,6 +2530,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 216102544}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &220447605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297817097325452051, guid: 71635d977e5889f4ba7c2a285ac210f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881050950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &226912076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6758,6 +6770,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551913497}
   m_CullTransparentMesh: 0
+--- !u!114 &553177957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297817097343095378, guid: 71635d977e5889f4ba7c2a285ac210f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881050950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &558454390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13906,28 +13930,26 @@ MonoBehaviour:
       type: 3}
     weight: 0.25
   GradenPrefabe:
-  - prefab: {fileID: 8172496117335426106, guid: 3527735cc30c8554aadd1222f91bf61f,
-      type: 3}
+  - prefab: {fileID: 767691619210903827, guid: d8501255501623b44991c352c129b83d, type: 3}
     weight: 0
   ParkPrefabe:
-  - prefab: {fileID: 7864668269691680764, guid: 44c75b500bfebf84993deb17f38a98f6,
+  - prefab: {fileID: 1398162523339694960, guid: f2dbf7e8edcfe6f48911b70bf887cceb,
       type: 3}
     weight: 0
   FactoryPrefabe:
-  - prefab: {fileID: 8028572972740798329, guid: b4e018779a1b9aa44b2a988c6d8ddfda,
+  - prefab: {fileID: 2037950124493628752, guid: 2c80ed2a87fd6a643b442292a340f7d8,
       type: 3}
     weight: 0
-  - prefab: {fileID: 801535651834448878, guid: 3240703552f47d04d9bf7207ca5bfa85, type: 3}
-    weight: 0
-  - prefab: {fileID: 8067785501733222628, guid: 4617fd335db984f4bb34f5eb561fd82b,
+  - prefab: {fileID: 2464393370099414963, guid: 5a1834336b103294fb08fd970a23710e,
       type: 3}
+    weight: 0
+  - prefab: {fileID: 564657277576745433, guid: 8f0742f4340268048b659113473e16d5, type: 3}
     weight: 0
   ServicePrfabe:
-  - prefab: {fileID: 3702253504043930072, guid: 838f9b485bb510747a4b89e3cb91e1bd,
+  - prefab: {fileID: 1965744126043511861, guid: 4a8b7d0b6e5f7c3488c6a77e39c378ca,
       type: 3}
     weight: 0
-  - prefab: {fileID: 8028572972740798329, guid: b4e018779a1b9aa44b2a988c6d8ddfda,
-      type: 3}
+  - prefab: {fileID: 948695418406959342, guid: b23d8607810fd19468a49ab4b829a8ce, type: 3}
     weight: 0
   placementManager: {fileID: 540532163}
   uIController: {fileID: 681313529}
@@ -27334,6 +27356,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8297817097325452051, guid: 71635d977e5889f4ba7c2a285ac210f4,
+        type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8297817097432662615, guid: 71635d977e5889f4ba7c2a285ac210f4,
         type: 3}
       propertyPath: m_Name
@@ -30528,6 +30555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Banknote: 0
   Fanciness: 0
+  storeCount: 0
   Level: 0
   Wood: {fileID: 0}
   Steel: {fileID: 0}
@@ -30547,6 +30575,8 @@ MonoBehaviour:
   HaveHydroenergy: 0
   peopleUI: {fileID: 1890611558}
   goldUI: {fileID: 1831484822}
+  happyUI: {fileID: 553177957}
+  storeUI: {fileID: 220447605}
 --- !u!1001 &2041821698
 PrefabInstance:
   m_ObjectHideFlags: 0

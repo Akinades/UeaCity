@@ -12,7 +12,6 @@ public class ElericFactorystate : MonoBehaviour
     {
        // electricpowerWant=5;
      GameApplicationManager.Instance.HaveElectricpower+=electricpowerMax;
-        GameApplicationManager.Instance.reducemoney(6000);
     }
 
     // Update is called once per frame
