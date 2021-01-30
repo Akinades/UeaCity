@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class spawnitem : MonoBehaviour
 {
-
-    
     public Transform Materialparent;
 
     public Button selected;
@@ -19,7 +17,7 @@ public class spawnitem : MonoBehaviour
 
     public float time;
 
-    SlotMaterial[] slots ;
+    SlotMaterial[] slots;
 
     void Start()
     {
@@ -38,7 +36,6 @@ public class spawnitem : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            Debug.Log("W");
             if (slots[i].state == SlotMaterial.State.None)
             {
                 slots[i].AddItem(item,time);
@@ -46,4 +43,5 @@ public class spawnitem : MonoBehaviour
             }
         }
     }
+
 }

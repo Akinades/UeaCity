@@ -18,7 +18,7 @@ public class StorageUI : MonoBehaviour
         storage.OnItemChanagedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<ItemSlot>();
-        
+        this.gameObject.SetActive(false);
     }
 
     private void Update()
