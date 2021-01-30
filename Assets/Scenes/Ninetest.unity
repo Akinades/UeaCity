@@ -2409,7 +2409,7 @@ GameObject:
   - component: {fileID: 1483595134}
   - component: {fileID: 1483595133}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: IronButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3070,7 +3070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835250367}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: MaterialUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3111,7 +3111,7 @@ GameObject:
   - component: {fileID: 1861559300}
   - component: {fileID: 1861559303}
   m_Layer: 5
-  m_Name: Material 1
+  m_Name: MaterialSlot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3321,7 +3321,7 @@ GameObject:
   - component: {fileID: 1958507736}
   - component: {fileID: 1958507735}
   m_Layer: 5
-  m_Name: Material
+  m_Name: MaterialSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3527,7 +3527,7 @@ GameObject:
   - component: {fileID: 2070986368}
   - component: {fileID: 2070986367}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BrickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,7 +3677,7 @@ GameObject:
   - component: {fileID: 2108862057}
   - component: {fileID: 2108862056}
   m_Layer: 5
-  m_Name: Button
+  m_Name: WoodButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
