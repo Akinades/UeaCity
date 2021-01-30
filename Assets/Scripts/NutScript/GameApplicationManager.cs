@@ -10,6 +10,7 @@ public class GameApplicationManager : MonoBehaviour
     public int Banknote;
     public int Fanciness;// 10-500
     private int People;
+    public int storeCount; 
 [Header("Player status")]
     protected float Exp;
     public int Level;
@@ -32,7 +33,7 @@ public int HaveElectricpower;
 public int SumHydroenergy;
 public int HaveHydroenergy;
 
-    public Text peopleUI , goldUI;
+    public Text peopleUI , goldUI,happyUI,storeUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,12 @@ public int HaveHydroenergy;
      // Money=1000000;
      // Fanciness=10;
       Level=1;
-    
+        //UI
+        peopleUI.text = "" + People;
+        goldUI.text = "" + Money;
+        happyUI.text = "" + Fanciness;
+        storeUI.text = "" + storeCount+"/50";
+
     }
     static public GameApplicationManager Instance
 
@@ -79,12 +85,10 @@ public int HaveHydroenergy;
     {
        // HomeStast.SetFanciness.(intfanciness );
        if(houseCount!=0){
-Fanciness=SumFanciness/houseCount;
+             Fanciness=SumFanciness/houseCount;
 
 
-            //UI
-            peopleUI.text = "" + People;
-            goldUI.text = "" + Money;
+      
 
        }
       

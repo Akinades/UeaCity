@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18346235, g: 0.22903953, b: 0.30586848, a: 1}
+  m_IndirectSpecularColor: {r: 0.18346217, g: 0.22903934, b: 0.30586755, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -26647,6 +26647,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1812621940}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1831484822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297817097211534791, guid: 71635d977e5889f4ba7c2a285ac210f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881050950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1837361089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27432,6 +27444,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8297817098323670120, guid: 71635d977e5889f4ba7c2a285ac210f4,
+        type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71635d977e5889f4ba7c2a285ac210f4, type: 3}
 --- !u!1001 &1882545449
@@ -27549,6 +27566,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1882545449}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890611558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297817098323670120, guid: 71635d977e5889f4ba7c2a285ac210f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881050950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1895662477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30443,6 +30472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2039921796}
   - component: {fileID: 2039921795}
+  - component: {fileID: 2039921797}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30484,6 +30514,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039921797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039921794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e5c96297baad34382ef5905dda2b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Banknote: 0
+  Fanciness: 0
+  Level: 0
+  Wood: {fileID: 0}
+  Steel: {fileID: 0}
+  Brick: {fileID: 0}
+  Rice: {fileID: 0}
+  Beef: {fileID: 0}
+  Plywood: {fileID: 0}
+  Hammer: {fileID: 0}
+  Book: {fileID: 0}
+  Pencil: {fileID: 0}
+  Ruler: {fileID: 0}
+  houseCount: 0
+  SumFanciness: 0
+  SumElectricpower: 0
+  HaveElectricpower: 0
+  SumHydroenergy: 0
+  HaveHydroenergy: 0
+  peopleUI: {fileID: 1890611558}
+  goldUI: {fileID: 1831484822}
 --- !u!1001 &2041821698
 PrefabInstance:
   m_ObjectHideFlags: 0

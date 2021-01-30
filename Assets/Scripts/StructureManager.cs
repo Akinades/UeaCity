@@ -53,6 +53,8 @@ public class StructureManager : MonoBehaviour
             if (uIController.OderFactory == 1 )
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
+
+
               
             }
             if (uIController.OderFactory == 2)
@@ -79,10 +81,7 @@ public class StructureManager : MonoBehaviour
             destroyObject.InitialPrefab(this,position);
 
             placementManager.PlaceObjectOnTheMap(position, housesPrefabe[0].prefab, CellType.Structure);
-            //add money
-            GameApplicationManager.Instance.addmoney(100);
-            //add people
-            GameApplicationManager.Instance.addPeople(10);
+           
           
             
             

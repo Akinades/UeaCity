@@ -25,11 +25,12 @@ public class Homestate : MonoBehaviour
     [Header("Max")]
     public int electricpowerMax = 5;
     public int HydroenergypowerMax = 10;
-    public int people = 10;
+    public int people;
     void Start()
     {
         //add money
         GameApplicationManager.Instance.addmoney(100);
+        GameApplicationManager.Instance.addPeople(10);
         GameApplicationManager.Instance.SumElectricpower += electricpowerMax;
         GameApplicationManager.Instance.SumHydroenergy += HydroenergypowerMax;
        
