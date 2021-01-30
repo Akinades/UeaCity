@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Homestate : MonoBehaviour
 {
-    public int rice;
-    public int electricpower;
-    public int hydroenergy; 
-    public int education;
-    public int health;
+    [Header("Percent")]
+    public int PercentRice;
+    public int PercentElectricpower;
+    public int PercentHydroenergy; 
+    public int PercentSafty;
+    public int PercentHealth;
 
-    private int Maxnumber;
+    //public int Maxnumber;
 
-    public int people;
+   
     public int fanciness;
-    private bool check;
+   // private bool check;
+  [Header("Now")]
+     public int rice;
+     public int electricpower;
 
+     [Header("Max")]
+     public int electricpowerMax=5;
+      public int people = 10;
     void Start()
     {
       
@@ -23,14 +30,17 @@ public class Homestate : MonoBehaviour
 
     void Update()
     {
-      fanciness= (rice+electricpower+hydroenergy+education+health)/5;// fanciness= Currency/500 *100 
-     //Debug.Log(GameApplicationManager.Instance.SumFanciness);
-      
-      if(check==false){
-         GameApplicationManager.Instance.SumFanciness+=fanciness;
-         check=true;
-      }
-     
+       PercentRice=(rice*100)/people;
+       PercentElectricpower= (electricpower*100)/electricpowerMax;
 
-      }
-}
+      fanciness= (PercentRice+PercentElectricpower+PercentHydroenergy+PercentSafty+PercentHealth)/5;// fanciness= Currency/500 *100 
+     Debug.Log(GameApplicationManager.Instance.SumFanciness);
+     //if(check){
+
+     }
+    }
+
+    //   public void SetPercentRice(int Importelectricpower){
+    //      electricpower+=Importelectricpower;
+    //   }
+

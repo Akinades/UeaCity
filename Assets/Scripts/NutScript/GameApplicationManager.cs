@@ -24,9 +24,10 @@ public class GameApplicationManager : MonoBehaviour
     public Item Pencil;
     public Item Ruler;
   
-
 public int houseCount;
 public int SumFanciness;
+public int SumElectricpower;
+public int HaveElectricpower;
     // Start is called before the first frame update
     void Start()
     {
