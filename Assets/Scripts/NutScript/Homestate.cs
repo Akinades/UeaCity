@@ -5,12 +5,13 @@ using UnityEngine;
 public class Homestate : MonoBehaviour
 {
     [Header("Percent")]
+    public int level;
     public int PercentRice;
     public int PercentElectricpower;
     public int PercentHydroenergy;
     public int PercentSafty;
     public int PercentHealth;
-
+    
     //public int Maxnumber;
 
 
@@ -27,8 +28,9 @@ public class Homestate : MonoBehaviour
     public int people = 10;
     void Start()
     {
+        //add money
+        GameApplicationManager.Instance.addmoney(100);
         GameApplicationManager.Instance.SumElectricpower += electricpowerMax;
-        GameApplicationManager.Instance.houseCount++;
         GameApplicationManager.Instance.SumHydroenergy += HydroenergypowerMax;
        
     }

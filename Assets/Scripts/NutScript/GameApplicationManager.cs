@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameApplicationManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public int SumElectricpower;
 public int HaveElectricpower;
 public int SumHydroenergy;
 public int HaveHydroenergy;
+
+    public Text peopleUI , goldUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +80,12 @@ public int HaveHydroenergy;
        // HomeStast.SetFanciness.(intfanciness );
        if(houseCount!=0){
 Fanciness=SumFanciness/houseCount;
+
+
+            //UI
+            peopleUI.text = "" + People;
+            goldUI.text = "" + Money;
+
        }
       
     }

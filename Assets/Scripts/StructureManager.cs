@@ -75,7 +75,7 @@ public class StructureManager : MonoBehaviour
         {
             //int randomIndex = GetRandomWeightedIndex(houseWeights);
              GameApplicationManager.Instance.houseCount++;
-            DestroyObject destroyObject = housesPrefabe[0].prefab.GetComponent<DestroyObject>();
+            Detial_house destroyObject = housesPrefabe[0].prefab.GetComponent<Detial_house>();
             destroyObject.InitialPrefab(this,position);
 
             placementManager.PlaceObjectOnTheMap(position, housesPrefabe[0].prefab, CellType.Structure);
