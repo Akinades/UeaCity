@@ -16,7 +16,6 @@ public class ItemSlot : MonoBehaviour
     public void AddItem (Item newItem)
     {
         item = newItem;
-
         icon.sprite = item.icon;
         icon.enabled = true;
         countItem = item.count;
@@ -31,9 +30,11 @@ public class ItemSlot : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+
         countItem = item.count;
         countText.text = countItem.ToString();
+        
     }
     
 }

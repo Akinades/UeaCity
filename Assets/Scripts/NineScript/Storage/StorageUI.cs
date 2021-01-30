@@ -6,6 +6,8 @@ public class StorageUI : MonoBehaviour
 {
     public Transform itemsParent;
 
+    public GameObject ItemSlotUI;
+
     StorageSystem storage;
 
     ItemSlot[] slots;
@@ -16,10 +18,14 @@ public class StorageUI : MonoBehaviour
         storage.OnItemChanagedCallback += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<ItemSlot>();
+        
+    }
 
+    private void Update()
+    {
         UpdateUI();
     }
-    
+
     void UpdateUI()
     {
         for (int i = 0; i < slots.Length;i++)
@@ -28,11 +34,13 @@ public class StorageUI : MonoBehaviour
             {
                 slots[i].gameObject.SetActive(true);
                 slots[i].AddItem(storage.items[i]);
+                
             }
             else
             {
                 slots[i].ClearSlot();
                 slots[i].gameObject.SetActive(false);
+                
             }
         }
     }

@@ -9,4 +9,17 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public int count = 0;
     
+    public void addItem(int add)
+    {
+        count += add;
+    }
+
+    public void reduceItem(int reduce)
+    {
+        if(count > 0)
+        {
+            count -= reduce;
+        }
+    }
+
 }

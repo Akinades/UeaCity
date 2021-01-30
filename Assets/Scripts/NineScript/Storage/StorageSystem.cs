@@ -31,18 +31,49 @@ public class StorageSystem : MonoBehaviour
         {
             if(item.name == items[i].name)
             {
-                items[i].count++;
+                items[i].addItem(1);
+                break;
             }
-            else if (item.name != items[i].name)
+            if (item.name != items[i].name)
             {
                 items.Add(item);
+               
             }
         }
+
+        if (OnItemChanagedCallback != null)
+            OnItemChanagedCallback.Invoke();
     }
+
+    public void Reduce(Item item ,int reduce)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (item.name == items[i].name)
+            {
+                items[i].reduceItem(reduce);
+                break;
+            }
+            if (item.name != items[i].name)
+            {
+                items.Add(item);
+
+            }
+        }
+
+        if (OnItemChanagedCallback != null)
+            OnItemChanagedCallback.Invoke();
+    }
+
 
     public void Clear(Item item)
     {
         items.Remove(item);
+
+        if (OnItemChanagedCallback != null)
+            OnItemChanagedCallback.Invoke();
     }
+
+    
 
 }
