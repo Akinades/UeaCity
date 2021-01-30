@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CL : MonoBehaviour
 {
-    public Transform home;
+    public Transform PlacementManager;
     public int num;
-      Homestate[] homestate;
+         Homestate[] homestate;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,11 @@ public class CL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          homestate=home.GetComponentsInChildren<Homestate>();
-        
+         // homestate= FindGameObjectsWithTag("Home").GetComponents<Homestate>();
+          GameObject[] reactors = GameObject.FindGameObjectsWithTag("Home");
+      homestate = new Homestate[reactors.Length];
+      for ( int i = 0; i < reactors.Length; ++i )
+          homestate[i] = reactors[i].GetComponent<Homestate>();
          //  Debug.Log(homestate.Length);
 //GameApplicationManager.Instance.SumFanciness=0;
                if(num>homestate.Length){

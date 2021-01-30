@@ -2070,9 +2070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095d56751c424f24e8ff96d4614118b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
-  Rotate: 0
-  speed: 1
 --- !u!1001 &198101604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6433,6 +6430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540532164}
   - component: {fileID: 540532163}
+  - component: {fileID: 540532165}
   m_Layer: 0
   m_Name: PlacementManager
   m_TagString: Untagged
@@ -6468,6 +6466,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540532165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540532162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbbb3801c0e5ca5429858daac5572816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlacementManager: {fileID: 540532164}
+  num: 0
 --- !u!1001 &546292533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30712,6 +30724,10 @@ MonoBehaviour:
   HaveElectricpower: 0
   SumHydroenergy: 0
   HaveHydroenergy: 0
+  SumHealth: 0
+  HaveHealth: 0
+  SumSecurity: 0
+  HaveSecurity: 0
   peopleUI: {fileID: 1890611558}
   goldUI: {fileID: 1831484822}
   happyUI: {fileID: 553177957}

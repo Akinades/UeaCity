@@ -21,8 +21,18 @@ public class BigEvent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button btn = AnsCorrect.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick); 
+        Button btn2 = AnsWrong.GetComponent<Button>();
+        btn2.onClick.AddListener(TaskOnClick2); 
     }
+     public void TaskOnClick(){
+       
+    }
+    public void TaskOnClick2(){
+ 
+
+      }
 
     // Update is called once per frame
     void Update()

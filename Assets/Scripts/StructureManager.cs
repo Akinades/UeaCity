@@ -52,17 +52,11 @@ public class StructureManager : MonoBehaviour
             //int randomIndex = GetRandomWeightedIndex(factoryWeights);
             if (uIController.OderFactory == 1 )
             {
-                Detail_Electirc_Factory destroyObject = FactoryPrefabe[0].prefab.GetComponent<Detail_Electirc_Factory>();
-                destroyObject.InitialPrefab(this, position);
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
-
-
               
             }
             if (uIController.OderFactory == 2)
             {
-                Detail_Water_Factory destroyObject = FactoryPrefabe[1].prefab.GetComponent<Detail_Water_Factory>();
-                destroyObject.InitialPrefab(this, position);
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[1].prefab, CellType.Structure);
               
             }
@@ -85,7 +79,10 @@ public class StructureManager : MonoBehaviour
             destroyObject.InitialPrefab(this,position);
 
             placementManager.PlaceObjectOnTheMap(position, housesPrefabe[0].prefab, CellType.Structure);
-           
+            //add money
+            GameApplicationManager.Instance.addmoney(100);
+            //add people
+            GameApplicationManager.Instance.addPeople(10);
           
             
             

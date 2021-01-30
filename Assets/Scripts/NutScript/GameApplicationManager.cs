@@ -32,7 +32,10 @@ public int SumElectricpower;
 public int HaveElectricpower;
 public int SumHydroenergy;
 public int HaveHydroenergy;
-
+public int SumHealth;
+public int HaveHealth;
+public int SumSecurity;
+public int HaveSecurity;
     public Text peopleUI , goldUI,happyUI,storeUI;
     // Start is called before the first frame update
     void Start()
@@ -88,8 +91,8 @@ public int HaveHydroenergy;
 
        }
 
-        peopleUI.text = "" + People;
-        goldUI.text = "" + Money;
+       peopleUI.text = "" + People;
+       goldUI.text = "" + Money;
         happyUI.text = "" + Fanciness;
         storeUI.text = "" + storeCount + "/50";
 
