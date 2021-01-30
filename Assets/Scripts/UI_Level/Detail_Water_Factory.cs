@@ -12,7 +12,7 @@ public class Detail_Water_Factory : MonoBehaviour
     WaterFactorystate waterFactorystate;
     public Button DeleteButton;
     public Text textWaterDemand, textWaterCapacity;
-    public Transform cameraZoom, Oldcamera;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +39,7 @@ public class Detail_Water_Factory : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject)
                 {
-                    Camera.main.transform.position = cameraZoom.position;
-                    Camera.main.transform.LookAt(this.gameObject.transform, position);
-                    Camera.main.transform.rotation = Oldcamera.rotation;
+                   
                     Level_Building.SetActive(true);
 
                 }

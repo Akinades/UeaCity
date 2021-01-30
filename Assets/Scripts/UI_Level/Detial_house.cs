@@ -11,7 +11,7 @@ public class Detial_house : MonoBehaviour
     public Button DeleteButton;
     public Button Uplevel_2;
     public Button Uplevel_3;
-    public Transform cameraZoom, Oldcamera;
+   
     public Vector3Int position;
      Homestate homestate;
     public Text textLevel, textPeople, textElec,textFood,textWater,texthealth, textFanciness, textsecurity, ironneeded;
@@ -147,9 +147,7 @@ public class Detial_house : MonoBehaviour
                 if (hit.collider.gameObject == this.gameObject)
                 {
                    
-                    Camera.main.transform.position = cameraZoom.position;
-                    Camera.main.transform.LookAt(this.gameObject.transform, position);
-                    Camera.main.transform.rotation = Oldcamera.rotation; 
+                   
                     Level_Building.SetActive(true);
 
                 }
