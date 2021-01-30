@@ -12,6 +12,7 @@ public class Detail_Electirc_Factory : MonoBehaviour
     ElericFactorystate elericFactorystate;
     public Button DeleteButton;
     public Text textElectircDemand, textElcetricCapacity;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,7 @@ public class Detail_Electirc_Factory : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject == this.gameObject)
+                if (hit.collider.gameObject == this.gameObject && gameManager.CheckBuilding == false)
                 {
                     Level_Building.SetActive(true);
 
