@@ -7,7 +7,7 @@ public class GameApplicationManager : MonoBehaviour
  [Header("Currency")]
     public static int  Money = 10000;
     public int Banknote;
-    private int Fanciness;// 10-500
+    public int Fanciness;// 10-500
     private int People;
 [Header("Player status")]
     protected float Exp;
@@ -33,12 +33,14 @@ public class GameApplicationManager : MonoBehaviour
     public int Service_1 = 1;
     public int Service_2 =1 ;
 
+public int houseCount;
+public int SumFanciness;
     // Start is called before the first frame update
     void Start()
     {
         //Frist not 
      // Money=1000000;
-      Fanciness=10;
+     // Fanciness=10;
       Level=1;
     }
     static public GameApplicationManager Instance
@@ -76,8 +78,15 @@ public class GameApplicationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       // HomeStast.SetFanciness.(intfanciness );
+       if(houseCount!=0){
+Fanciness=SumFanciness/houseCount;
+       }
+      
     }
+
+      
+    
 
     // Variables 
     public void addmoney(int value) {
@@ -161,4 +170,6 @@ public void addLevel(int value) {
         Service_2 += value;
         Debug.Log("Service_2" + Service_2);
     }
+
+
 }

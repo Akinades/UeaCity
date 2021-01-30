@@ -11,7 +11,6 @@ public class StructureManager : MonoBehaviour
     public PlacementManager placementManager;
     public UIController uIController;
     private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
-
     private void Start()
     {
         houseWeights = housesPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
@@ -76,7 +75,7 @@ public class StructureManager : MonoBehaviour
         if (CheckPositionBeforePlacement(position))
         {
             //int randomIndex = GetRandomWeightedIndex(houseWeights);
-
+             GameApplicationManager.Instance.houseCount++;
             DestroyObject destroyObject = housesPrefabe[0].prefab.GetComponent<DestroyObject>();
             destroyObject.InitialPrefab(this,position);
 
@@ -86,6 +85,7 @@ public class StructureManager : MonoBehaviour
             //add people
             GameApplicationManager.Instance.addPeople(10);
             Debug.Log("House Lv. =  "+GameApplicationManager.Instance.house); 
+            
             
             AudioPlayer.instance.PlayPlacementSound();
         }
