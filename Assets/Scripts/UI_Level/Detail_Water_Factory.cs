@@ -9,14 +9,14 @@ public class Detail_Water_Factory : MonoBehaviour
     public GameObject Level_Building;
     public StructureManager structureManager;
     public Vector3Int position;
-    ElericFactorystate elericFactorystate;
+    WaterFactorystate waterFactorystate;
     public Button DeleteButton;
     public Text textWaterDemand, textWaterCapacity; 
     // Start is called before the first frame update
     void Start()
     {
-        GameApplicationManager.Instance.reducemoney(6000);
-        elericFactorystate = GetComponent<ElericFactorystate>();
+        GameApplicationManager.Instance.reducemoney(5000);
+        waterFactorystate = GetComponent<WaterFactorystate>();
         Button btn = DeleteButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
 
@@ -58,6 +58,7 @@ public class Detail_Water_Factory : MonoBehaviour
         if (this.structureManager)
         {
             this.structureManager.RemoveStructure(gameObject, position);
+            GameApplicationManager.Instance.HaveHydroenergy -= waterFactorystate.HydroenergyMax;
             Debug.Log("Booomb"); 
         }
        

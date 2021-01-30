@@ -15,7 +15,7 @@ public class Detail_Electory_Factory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameApplicationManager.Instance.reducemoney(6000);
+        GameApplicationManager.Instance.reducemoney(4000);
         elericFactorystate = GetComponent<ElericFactorystate>();
         Button btn = DeleteButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
@@ -58,6 +58,7 @@ public class Detail_Electory_Factory : MonoBehaviour
         if (this.structureManager)
         {
             this.structureManager.RemoveStructure(gameObject, position);
+            GameApplicationManager.Instance.HaveElectricpower -= elericFactorystate.electricpowerMax;
             Debug.Log("Booomb"); 
         }
        
