@@ -60,18 +60,7 @@ public class Detial_house : MonoBehaviour
                 if (OnDetail == false)
                 {
 
-                    if (GameApplicationManager.Instance.house == 1)
-                    {
-                        Level_Building[0].SetActive(true);
-                    }
-                    if (GameApplicationManager.Instance.house == 2)
-                    {
-                        Level_Building[1].SetActive(true);
-                    }
-                    if (GameApplicationManager.Instance.house == 3)
-                    {
-                        Level_Building[2].SetActive(true);
-                    }
+                   
 
 
                 }

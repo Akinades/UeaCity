@@ -33,13 +33,12 @@ public class StructureManager : MonoBehaviour
             if(uIController.OderService == 1 )
             {
                 placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[0].prefab, CellType.Structure);
-                Debug.Log("Service_1 Lv. =  " + GameApplicationManager.Instance.Service_1);
-
+              
             }
             if (uIController.OderService == 2)
             {
                 placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[1].prefab, CellType.Structure);
-                Debug.Log("Service_2 Lv. =  " + GameApplicationManager.Instance.Service_2);
+               
 
             }
             AudioPlayer.instance.PlayPlacementSound();
@@ -54,17 +53,17 @@ public class StructureManager : MonoBehaviour
             if (uIController.OderFactory == 1 )
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
-                Debug.Log("Factory_1 Lv. =  " + GameApplicationManager.Instance.Factory_1);
+              
             }
             if (uIController.OderFactory == 2)
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[1].prefab, CellType.Structure);
-                Debug.Log("Factory_2 Lv. =  " + GameApplicationManager.Instance.Factory_2);
+              
             }
             if (uIController.OderFactory == 3)
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[2].prefab, CellType.Structure);
-                Debug.Log("Factory_3 Lv. =  " + GameApplicationManager.Instance.Factory_3);
+                
             }
            
             AudioPlayer.instance.PlayPlacementSound();
@@ -84,7 +83,7 @@ public class StructureManager : MonoBehaviour
             GameApplicationManager.Instance.addmoney(100);
             //add people
             GameApplicationManager.Instance.addPeople(10);
-            Debug.Log("House Lv. =  "+GameApplicationManager.Instance.house); 
+          
             
             
             AudioPlayer.instance.PlayPlacementSound();
@@ -97,7 +96,7 @@ public class StructureManager : MonoBehaviour
         {
             //int randomIndex = GetRandomWeightedIndex(gradenWeights);
             placementManager.PlaceObjectOnTheMap(position, GradenPrefabe[0].prefab, CellType.Structure);
-            Debug.Log("Garden Lv. =  "+GameApplicationManager.Instance.Garden);
+          
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
@@ -107,7 +106,7 @@ public class StructureManager : MonoBehaviour
         {
             //int randomIndex = GetRandomWeightedIndex(parkWeights);
             placementManager.PlaceObjectOnTheMap(position, ParkPrefabe[0].prefab, CellType.Structure);
-            Debug.Log("Park Lv. =  " + GameApplicationManager.Instance.Park);
+         
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
