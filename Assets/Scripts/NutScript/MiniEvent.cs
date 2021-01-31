@@ -54,6 +54,12 @@ public class MiniEvent : MonoBehaviour
        timerFood+=Time.deltaTime;
        timerHealth+=Time.deltaTime;
        timerSecurity+=Time.deltaTime;
+       if(_LowRice==true||_LowHealth==true||_LowSecurity==true){
+         UIMainMiniEvent.SetActive(true);
+       }
+       if(_LowRice==false&&_LowHealth==false&&_LowSecurity==false){
+         UIMainMiniEvent.SetActive(false);
+       }
         if(_LowRice==true){
           ButtonFood.SetActive(true);
           if(timerFood>60f){

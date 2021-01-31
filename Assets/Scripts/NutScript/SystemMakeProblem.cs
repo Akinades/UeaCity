@@ -5,7 +5,7 @@ using UnityEngine;
 public class SystemMakeProblem : MonoBehaviour
 {
      private float time = 0.0f;
- public float EverySecond = 10.0f;
+ public float EverySecond = 1200.0f;
  public GameObject UIBigEvent;
  public BigEvent bigevent;
     // Start is called before the first frame update
@@ -17,15 +17,12 @@ public class SystemMakeProblem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if (time <= EverySecond) {
           time += Time.deltaTime;
- 
-     if (time >= EverySecond) {
-         time = 0.0f;
-         //GameApplicationManager.Instance.addmoney(10);
-        // GameApplicationManager.Instance.addExp(100);
+         }
+     if (time > EverySecond) {
          Debug.Log("Get Problem EverySecond ");
          UIBigEvent.SetActive(true);
-         bigevent.SetQuestion(Random.Range(0,5));
      }
     }
 }

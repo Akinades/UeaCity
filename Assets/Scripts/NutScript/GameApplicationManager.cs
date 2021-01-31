@@ -12,7 +12,7 @@ public class GameApplicationManager : MonoBehaviour
     private int People;
     public int storeCount; 
 [Header("Player status")]
-    protected float Exp;
+    public float Exp;
     public int Level;
 [Header("Material")]    
     public Item Wood;
@@ -131,10 +131,6 @@ public void addPeople(int value) {
 public void reducePeople(int value) {
          People-=value;
 }
-public void addExp(float value) {
-         Exp+=value;
-          Debug.Log("Now Exp =" + Exp);
-}
 public void addLevel(int value) {
          Level+=value;
           Debug.Log("Now Level =" + Exp);
@@ -150,8 +146,10 @@ public void addLevel(int value) {
         FarmCount += value;
         Debug.Log("Now Level =" + Exp);
     }
+public void addExp(float value) {
+         Exp+=value;
 
-
+}
 
 
 }
