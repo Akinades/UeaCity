@@ -18,7 +18,7 @@ public class Homestate : MonoBehaviour
     public int PercentSafty;
     public int PercentHealth;
     public int PercentLoveHome;
-    
+     public Item riceCount; 
     //public int Maxnumber;
 
 
@@ -39,6 +39,7 @@ public class Homestate : MonoBehaviour
     public int people=10;
     void Start()
     {
+        
         //add money
         GameApplicationManager.Instance.addmoney(100);
         GameApplicationManager.Instance.addPeople(10);
@@ -86,7 +87,8 @@ public class Homestate : MonoBehaviour
         {
             Security = GameApplicationManager.Instance.HaveSecurity / GameApplicationManager.Instance.houseCount;
         }
-//Rice 
+        //Rice 
+        rice = riceCount.count;
        timeRice+= Time.deltaTime;
      if(timeRice>300f){
          rice-=people;

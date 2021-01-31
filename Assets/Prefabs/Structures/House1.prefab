@@ -72,6 +72,7 @@ MonoBehaviour:
   PercentSafty: 0
   PercentHealth: 0
   PercentLoveHome: 0
+  riceCount: {fileID: 11400000, guid: 828e2af9c433e384faa04402fc348856, type: 2}
   fanciness: 0
   rice: 0
   electricpower: 0
@@ -469,6 +470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875394801393082855, guid: 81ee5d2e8eaed074ba78cbae07d24ce6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2875394801393082856, guid: 81ee5d2e8eaed074ba78cbae07d24ce6,
         type: 3}
