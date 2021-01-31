@@ -34,7 +34,7 @@ public class MiniEvent : MonoBehaviour
         Button btn2 = Health.GetComponent<Button>();
         btn2.onClick.AddListener(TaskOnClick2); 
         Button btn3 = Security.GetComponent<Button>();
-        btn2.onClick.AddListener(TaskOnClick3);
+        btn3.onClick.AddListener(TaskOnClick3);
       
     }
      public void TaskOnClick(){

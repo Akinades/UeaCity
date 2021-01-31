@@ -12,10 +12,9 @@ public class DestroyObject : MonoBehaviour
     public float holdDownStartime = 0; 
     public GameObject UIDelete;
 
-    bool move=false;
+public bool NotDown;
     //private Vector3 mousePosition;
-    public float distance = 10.0f;
-    bool useCameraDistance=false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +22,7 @@ public class DestroyObject : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick); 
         Button btn2 = MoveButton.GetComponent<Button>();
         btn2.onClick.AddListener(TaskOnClick2); 
+       
     }
 
     public void InitialPrefab(StructureManager structureManager,Vector3Int position){
@@ -36,25 +36,20 @@ public class DestroyObject : MonoBehaviour
        }
     }
     public void TaskOnClick2(){
-        move=true;
-     
+ 
+
       }
 
        void Update()
     {
-        if(move==true){
-   Debug.Log( "Do something now" );
-          if(useCameraDistance){
-              float distance=(transform.position-Camera.main.transform.position).magnitude;
-          }
-          Vector3 mousePosition=Input.mousePosition;
-          transform.position=Camera.main.ScreenToWorldPoint(mousePosition);
- //transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0)){
+     if(NotDown=false)
+      Debug.Log("Down");
         }
-   
     if (Input.GetMouseButton(0))
                   {
-                      holdDownStartime+= Time.deltaTime;   
+                      holdDownStartime+= Time.deltaTime;
+                      NotDown=true;
                   }
                   else {
                   holdDownStartime=0;    
@@ -65,7 +60,7 @@ public class DestroyObject : MonoBehaviour
             {
                 if (hit.collider.gameObject == this.gameObject)
                 {
-                    Debug.Log("+");
+                   // Debug.Log("+");
                      if (holdDownStartime > 1.5f)
                      { 
                     UIDelete.SetActive(true);
