@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18346234, g: 0.22903953, b: 0.30586848, a: 1}
+  m_IndirectSpecularColor: {r: 0.18346217, g: 0.22903934, b: 0.30586755, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 101346885}
   - component: {fileID: 101346889}
   m_Layer: 5
-  m_Name: Factory-1
+  m_Name: Factory-Electric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,13 +1355,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 5071382668404658502, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2071,6 +2072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095d56751c424f24e8ff96d4614118b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  Rotate: 0
+  speed: 1
 --- !u!1001 &198101604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16839,7 +16843,7 @@ GameObject:
   - component: {fileID: 1254589152}
   - component: {fileID: 1254589156}
   m_Layer: 5
-  m_Name: Service-2
+  m_Name: Service-Hospital
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16854,15 +16858,15 @@ RectTransform:
   m_GameObject: {fileID: 1254589150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7530356, y: 0.7530356, z: 0.7530356}
   m_Children: []
   m_Father: {fileID: 2029494326}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 43.5}
-  m_SizeDelta: {x: -3.059021, y: -22}
+  m_AnchoredPosition: {x: 0.000061035156, y: 38.9}
+  m_SizeDelta: {x: -3.059021, y: -83.071304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1254589152
 Animator:
@@ -16939,13 +16943,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8926479, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 3462939387528089853, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -19322,7 +19327,7 @@ GameObject:
   - component: {fileID: 1405492521}
   - component: {fileID: 1405492524}
   m_Layer: 5
-  m_Name: Button-Garden
+  m_Name: Button-Farm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19384,13 +19389,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.92168856, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -8793997859089249857, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -23625,7 +23631,7 @@ GameObject:
   - component: {fileID: 1607920149}
   - component: {fileID: 1607920153}
   m_Layer: 5
-  m_Name: Factory-2
+  m_Name: Factory-Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23725,13 +23731,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -2483081755612953459, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -24673,7 +24680,7 @@ GameObject:
   - component: {fileID: 1664144542}
   - component: {fileID: 1664144546}
   m_Layer: 5
-  m_Name: Service-1
+  m_Name: Service-Police
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24688,15 +24695,15 @@ RectTransform:
   m_GameObject: {fileID: 1664144540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1609268, y: 1.1609268, z: 1.1609268}
+  m_LocalScale: {x: 0.7466821, y: 0.7466821, z: 0.7466821}
   m_Children: []
   m_Father: {fileID: 2029494326}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: -7.6777344, y: -24.994934}
+  m_AnchoredPosition: {x: 0, y: -1.0999908}
+  m_SizeDelta: {x: -7.6777344, y: -83.64621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1664144542
 Animator:
@@ -24773,13 +24780,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8926479, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -4849627389016977287, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -25822,7 +25830,7 @@ GameObject:
   - component: {fileID: 1757344848}
   - component: {fileID: 1757344852}
   m_Layer: 5
-  m_Name: Factory-3
+  m_Name: Factory-Gen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25922,13 +25930,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 4727211600217482154, guid: cf67d6a7b015a074690cc5e65e3a6b1e,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
