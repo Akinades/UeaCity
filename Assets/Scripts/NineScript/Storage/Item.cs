@@ -9,6 +9,8 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public int count = 0;
 
+    
+
     public GameObject Object;
     
     public void addItem(int add)
@@ -16,12 +18,21 @@ public class Item : ScriptableObject
         count += add;
     }
 
-    public void reduceItem(int reduce)
+    public bool reduceItem(int reduce)
     {
+        bool use;
         if(count > 0)
         {
             count -= reduce;
+            use = true;
+
         }
+        else
+        {
+            use = false;
+        }
+
+        return use;
     }
 
 }
