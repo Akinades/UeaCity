@@ -11,15 +11,16 @@ public class StructureManager : MonoBehaviour
     public StructurePrefabWeighted[] housesPrefabe, FarmPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
     public PlacementManager placementManager;
     public UIController uIController;
-    public Text textRoad; 
-    private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
+    public Text textRoad;
+    public Item wood; 
+    //private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
     private void Start()
     {
-        houseWeights = housesPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
+        /*houseWeights = housesPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         gradenWeights = FarmPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         parkWeights = ParkPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         factoryWeights = FactoryPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
-        serviceWeights = ServicePrfabe.Select(prefabStats => prefabStats.weight).ToArray();
+        serviceWeights = ServicePrfabe.Select(prefabStats => prefabStats.weight).ToArray();*/
     }
   public void RemoveStructure(GameObject prefab,Vector3Int position)
     {
@@ -76,7 +77,7 @@ public class StructureManager : MonoBehaviour
     }
     public void placeHouse(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position) )
+        if (CheckPositionBeforePlacement(position) && wood.count > 0)
         {
             //int randomIndex = GetRandomWeightedIndex(houseWeights);
              GameApplicationManager.Instance.houseCount++;

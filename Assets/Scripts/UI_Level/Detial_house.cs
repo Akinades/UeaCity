@@ -25,6 +25,7 @@ public class Detial_house : MonoBehaviour
     {
         //add money
         GameApplicationManager.Instance.addmoney(100);
+        StorageSystem.instance.Reduce(wood, 1); 
         //add people
        // GameApplicationManager.Instance.addPeople(10);
 
@@ -33,8 +34,17 @@ public class Detial_house : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick);
         Uplevel_2.onClick.AddListener(UpgradeLevel_2);
         Uplevel_3.onClick.AddListener(UpgradeLevel_3);
-        
-        woodneeded[0].text = " " + wood.count + "/1";
+
+        textFood.text = "Foods : " + homestate.rice + "/5";
+        texthealth.text = "Heath : " + homestate.PercentHealth + "%";
+        textElec.text = "Electric : " + homestate.electricpower + "/5";
+        textWater.text = "Water : " + homestate.Hydroenergy + "/5";
+        textPeople.text = "People : " + homestate.people;
+        textsecurity.text = "Security : " + homestate.PercentSafty + "%";
+        textFanciness.text = "Fanciness : " + homestate.fanciness + "%";
+        textLevel.text = "House Lv. " + homestate.level;
+
+
 
 
     }
@@ -58,8 +68,8 @@ public class Detial_house : MonoBehaviour
             Level_3.SetActive(true);
             Debug.Log("Upgrade!!! to Lv.2");
             ironneeded.text = " " + iron.count + "/1";
+           
             woodneeded[1].text = " " + wood.count + "/1";
-
             textFood.text = "Foods : " + homestate.rice + "/15";
             texthealth.text = "Heath : " + homestate.PercentHealth + " %";
             textElec.text = "Electric : " + homestate.electricpower + "/7";
@@ -125,16 +135,9 @@ public class Detial_house : MonoBehaviour
     void Update()
     {
 
-
-
-        textFood.text = "Foods : " + homestate.rice + "/5";
-        texthealth.text = "Heath : " + homestate.PercentHealth + "%";
-        textElec.text = "Electric : " + homestate.electricpower + "/5";
-        textWater.text = "Water : " + homestate.Hydroenergy + "/5";
-        textPeople.text = "People : " + homestate.people;
-        textsecurity.text = "Security : " + homestate.PercentSafty + "%";
-        textFanciness.text = "Fanciness : " + homestate.fanciness + "%";
-        textLevel.text = "House Lv. " + homestate.level;
+        woodneeded[0].text = " " + wood.count + "/1";
+       
+        
 
         if (Input.GetMouseButtonDown(0))
         {
