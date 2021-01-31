@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18346234, g: 0.22903953, b: 0.30586848, a: 1}
+  m_IndirectSpecularColor: {r: 0.18346217, g: 0.22903934, b: 0.30586755, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14511,7 +14511,7 @@ PrefabInstance:
     - target: {fileID: 907529672620391682, guid: 99f399e837577634c99f8ecc46c5f80a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 907529672620391694, guid: 99f399e837577634c99f8ecc46c5f80a,
         type: 3}
@@ -14622,6 +14622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 907529672996651616, guid: 99f399e837577634c99f8ecc46c5f80a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 907529672996651631, guid: 99f399e837577634c99f8ecc46c5f80a,
         type: 3}
@@ -19469,7 +19474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1400650982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19499,7 +19504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -19528,7 +19533,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1400650985
 RectTransform:
@@ -19562,7 +19567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a448ec529dd994497488a400c16b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EverySecond: 10
+  EverySecond: 300
   UIBigEvent: {fileID: 1988258242}
   bigevent: {fileID: 1988258246}
 --- !u!1 &1405492518
@@ -30144,7 +30149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1988258243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30416,8 +30421,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 662549328}
   m_HandleRect: {fileID: 662549327}
   m_Direction: 2
-  m_Value: 0.6159786
-  m_Size: 0.39025715
+  m_Value: 0.6159785
+  m_Size: 0.3902571
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
