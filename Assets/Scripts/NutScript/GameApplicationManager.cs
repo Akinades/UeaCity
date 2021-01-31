@@ -25,7 +25,9 @@ public class GameApplicationManager : MonoBehaviour
     public Item Book;
     public Item Pencil;
     public Item Ruler;
-  
+
+public int FactoryCount;
+public int FarmCount; 
 public int houseCount;
 public int SumFanciness;
 public int SumElectricpower;
@@ -94,7 +96,7 @@ public int HaveSecurity;
        peopleUI.text = "" + People;
        goldUI.text = "" + Money;
         happyUI.text = "" + Fanciness;
-        storeUI.text = "" + storeCount + "/50";
+       // storeUI.text = "" + StorageSystem.instance. + "/50";
 
 
     }
@@ -137,9 +139,19 @@ public void addLevel(int value) {
          Level+=value;
           Debug.Log("Now Level =" + Exp);
 }
-    //test
-    
-    
+ public void addFactory(int value)
+    {
+        FactoryCount += value;
+        Debug.Log("Now Level =" + Exp);
+    }
+
+    public void addFarm(int value)
+    {
+        FarmCount += value;
+        Debug.Log("Now Level =" + Exp);
+    }
+
+
 
 
 }

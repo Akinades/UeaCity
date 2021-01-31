@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     {
         CheckBuilding = false;
         ClearInputActions();
-        inputManager.OnMouseClick += structureManager.placeGraden;
+        inputManager.OnMouseClick += structureManager.placeFarm;
 
     }
 

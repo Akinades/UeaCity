@@ -7,14 +7,14 @@ using UnityEngine;
 
 public class StructureManager : MonoBehaviour
 {   
-    public StructurePrefabWeighted[] housesPrefabe, GradenPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
+    public StructurePrefabWeighted[] housesPrefabe, FarmPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
     public PlacementManager placementManager;
     public UIController uIController;
     private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
     private void Start()
     {
         houseWeights = housesPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
-        gradenWeights = GradenPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
+        gradenWeights = FarmPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         parkWeights = ParkPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         factoryWeights = FactoryPrefabe.Select(prefabStats => prefabStats.weight).ToArray();
         serviceWeights = ServicePrfabe.Select(prefabStats => prefabStats.weight).ToArray();
@@ -50,18 +50,19 @@ public class StructureManager : MonoBehaviour
         if (CheckPositionBeforePlacement(position))
         {
             //int randomIndex = GetRandomWeightedIndex(factoryWeights);
-            if (uIController.OderFactory == 1 )
+            if (uIController.OderFactory == 1 && GameApplicationManager.Instance.Money > 4000 )
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[0].prefab, CellType.Structure);
               
             }
-            if (uIController.OderFactory == 2)
+            if (uIController.OderFactory == 2 && GameApplicationManager.Instance.Money > 5000)
             {
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[1].prefab, CellType.Structure);
               
             }
-            if (uIController.OderFactory == 3)
+            if (uIController.OderFactory == 3 && GameApplicationManager.Instance.FactoryCount <3)
             {
+                GameApplicationManager.Instance.addFactory(1); 
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[2].prefab, CellType.Structure);
                 
             }
@@ -90,12 +91,18 @@ public class StructureManager : MonoBehaviour
         }
     }
 
-    public void placeGraden(Vector3Int position)
+    public void placeFarm(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position))
+        if (CheckPositionBeforePlacement(position)  && GameApplicationManager.Instance.FarmCount < 2)
         {
+            
+                GameApplicationManager.Instance.addFarm(1);
+            GameApplicationManager.Instance.reducemoney(1000);
+                placementManager.PlaceObjectOnTheMap(position, FarmPrefabe[0].prefab, CellType.Structure);
+            
+            
             //int randomIndex = GetRandomWeightedIndex(gradenWeights);
-            placementManager.PlaceObjectOnTheMap(position, GradenPrefabe[0].prefab, CellType.Structure);
+          
           
             AudioPlayer.instance.PlayPlacementSound();
         }
