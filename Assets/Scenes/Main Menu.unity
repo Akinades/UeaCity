@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -320,12 +320,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e017718372e4354caea6b69262bc9c4, type: 3}
---- !u!82 &82235866 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19,
-    type: 3}
-  m_PrefabInstance: {fileID: 3808851828698041278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &222573480 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3808851828618098710, guid: 189c40c70f56f894480d91ebe4eceb19,
@@ -1731,6 +1725,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328013960}
   m_CullTransparentMesh: 0
+--- !u!82 &1510983842 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1557599706, guid: 189c40c70f56f894480d91ebe4eceb19,
+    type: 3}
+  m_PrefabInstance: {fileID: 3808851828698041278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1535074488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,10 +2395,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 886804457}
     m_Modifications:
+    - target: {fileID: 3060195633380728224, guid: 7e017718372e4354caea6b69262bc9c4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3060195633559150249, guid: 7e017718372e4354caea6b69262bc9c4,
         type: 3}
       propertyPath: m_Name
       value: Option Manu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060195633559150249, guid: 7e017718372e4354caea6b69262bc9c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3060195633559150250, guid: 7e017718372e4354caea6b69262bc9c4,
         type: 3}
@@ -2505,6 +2515,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3060195633862221919, guid: 7e017718372e4354caea6b69262bc9c4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3060195634075852537, guid: 7e017718372e4354caea6b69262bc9c4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2530,6 +2545,16 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1943368815}
+    - target: {fileID: 3060195634572196452, guid: 7e017718372e4354caea6b69262bc9c4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060195634781219913, guid: 7e017718372e4354caea6b69262bc9c4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e017718372e4354caea6b69262bc9c4, type: 3}
 --- !u!1001 &3808851828698041278
@@ -2544,16 +2569,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 9bfe36ccd63480d418060ee871b8ae8a, type: 3}
     - target: {fileID: 1557599706, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
+    - target: {fileID: 1557599706, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3808851828618098711, guid: 189c40c70f56f894480d91ebe4eceb19,
         type: 3}
@@ -2619,7 +2648,7 @@ PrefabInstance:
         type: 3}
       propertyPath: backgroundAudio
       value: 
-      objectReference: {fileID: 82235866}
+      objectReference: {fileID: 1510983842}
     - target: {fileID: 5254255531904917868, guid: 189c40c70f56f894480d91ebe4eceb19,
         type: 3}
       propertyPath: backgroundSlider
