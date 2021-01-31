@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3037,7 +3037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 'Start : Build a house now !!!'
 --- !u!222 &236275183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9003,7 +9003,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &681313533
 RectTransform:
@@ -15629,6 +15629,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1111135267}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1125690157 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265648597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128566210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17641,19 +17647,19 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9bfe36ccd63480d418060ee871b8ae8a, type: 3}
     - target: {fileID: 1557599706, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1557599706, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: Loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2045762951, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3808851828618098711, guid: 189c40c70f56f894480d91ebe4eceb19,
         type: 3}
@@ -17715,6 +17721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5254255531904917868, guid: 189c40c70f56f894480d91ebe4eceb19,
+        type: 3}
+      propertyPath: backgroundAudio
+      value: 
+      objectReference: {fileID: 1125690157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189c40c70f56f894480d91ebe4eceb19, type: 3}
 --- !u!82 &1265648598 stripped
@@ -22212,7 +22223,7 @@ GameObject:
   - component: {fileID: 1520861765}
   - component: {fileID: 1520861764}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22276,7 +22287,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &1520861767
 RectTransform:
@@ -25452,7 +25463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1.0999908}
+  m_AnchoredPosition: {x: 0, y: -1.0999756}
   m_SizeDelta: {x: -7.6777344, y: -83.64621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1664144542

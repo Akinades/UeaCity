@@ -93,6 +93,9 @@ public class StructureManager : MonoBehaviour
             
             
             AudioPlayer.instance.PlayPlacementSound();
+        }else
+        {
+            textRoad.text = "Wood needed!!! Build a Factory to create wood ";
         }
     }
 
