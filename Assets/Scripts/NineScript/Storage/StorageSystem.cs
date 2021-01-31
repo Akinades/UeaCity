@@ -95,4 +95,22 @@ public class StorageSystem : MonoBehaviour
         count = privatecount;
     }
 
+    Item itemfind;
+
+    public Item findItem(string name)
+    {
+        
+        for (int i = 0; i < items.Count; i++)
+        {
+            if(items[i].name == name)
+            {
+                itemfind = items[i];
+            }
+            
+            break;
+        }
+
+        return itemfind;
+    }
+
 }

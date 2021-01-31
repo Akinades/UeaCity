@@ -13,6 +13,8 @@ public class spawnitem : MonoBehaviour
 
     public Image icon;
 
+    public Text text;
+
     public Item item;
 
     public float time;
@@ -29,7 +31,7 @@ public class spawnitem : MonoBehaviour
 
     void Update()
     {
-        
+        text.text = time.ToString("0")+" sec";
     }
 
     public void chooseItem(Item item)

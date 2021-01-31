@@ -9,7 +9,10 @@ public class SlotMaterial : MonoBehaviour
     public State state;
     public float timeSpawnItem;
 
+    public Text text;
+
     public Image icon;
+    public Image cancel;
 
     public Item item;
 
@@ -26,20 +29,22 @@ public class SlotMaterial : MonoBehaviour
         switch (state)
         {
             case State.None:
-               
+                cancel.gameObject.SetActive(false);
+                text.text = "Empty";
                 break;
 
             case State.Fill:
                 if (timeSpawnItem > 0)
                 {
                     timeSpawnItem -= Time.deltaTime;
+                    cancel.gameObject.SetActive(true);
+                    text.text = timeSpawnItem.ToString("0") + " sec";
                 }
                 else
                 {
                     Factory.spawn(item);
                     ClearSlot();
                 }
-                
                 break;
         }
     }
