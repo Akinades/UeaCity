@@ -8,6 +8,9 @@ public class StorageSystem : MonoBehaviour
 
     public static StorageSystem instance;
 
+    int privatecount;
+    public int count;
+
     private void Awake()
     {
         if (instance != null)
@@ -25,13 +28,19 @@ public class StorageSystem : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
+    private void Update()
+    {
+        totalCount();
+    }
+
     public void Add (Item item)
-    {   
-        for(int i = 0; i < items.Count; i++)
+    {
+        for (int i = 0; i < items.Count; i++)
         {
             if(item.name == items[i].name)
             {
                 items[i].addItem(1);
+                totalCount();
                 break;
             }
             if (item.name != items[i].name)
@@ -52,6 +61,7 @@ public class StorageSystem : MonoBehaviour
             if (item.name == items[i].name)
             {
                 items[i].reduceItem(reduce);
+                totalCount();
                 break;
             }
             if (item.name != items[i].name)
@@ -74,6 +84,15 @@ public class StorageSystem : MonoBehaviour
             OnItemChanagedCallback.Invoke();
     }
 
-    
+    public void totalCount()
+    {
+        privatecount = 0;
+        for (int i = 0; i < items.Count; i++)
+        {
+            privatecount += items[i].count;
+            
+        }
+        count = privatecount;
+    }
 
 }

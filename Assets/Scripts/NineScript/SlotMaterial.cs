@@ -58,6 +58,7 @@ public class SlotMaterial : MonoBehaviour
         item = null;
         icon.sprite = null;
         icon.enabled = false;
+        timeSpawnItem = 0;
         state = State.None;
     }
 }
