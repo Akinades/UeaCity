@@ -96,7 +96,7 @@ public int HaveSecurity;
        peopleUI.text = "" + People;
        goldUI.text = "" + Money;
         happyUI.text = "" + Fanciness;
-       // storeUI.text = "" + StorageSystem.instance. + "/50";
+       storeUI.text = "" + StorageSystem.instance.count;
 
 
     }

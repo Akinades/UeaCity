@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Building
+  - Home
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Nature
   - Ground
-  - 
+  - Event
   - 
   - 
   - 
