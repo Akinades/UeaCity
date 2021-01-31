@@ -4,12 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StructureManager : MonoBehaviour
 {   
     public StructurePrefabWeighted[] housesPrefabe, FarmPrefabe,ParkPrefabe,FactoryPrefabe,ServicePrfabe;
     public PlacementManager placementManager;
     public UIController uIController;
+    public Text textRoad; 
     private float[] houseWeights, gradenWeights, parkWeights,factoryWeights,serviceWeights;
     private void Start()
     {
@@ -150,16 +152,19 @@ public class StructureManager : MonoBehaviour
         if (placementManager.CheckIfPositionInBound(position) == false)
         {
             Debug.Log("This position is out of bounds");
+            textRoad.text = "This position is out of bounds";
             return false;
         }
         if (placementManager.CheckIfPositionIsFree(position) == false)
         {
             Debug.Log("This position is not EMPTY");
+            textRoad.text = "This position is not EMPTY";
             return false;
         }
         if(placementManager.GetNeighboursOfTypeFor(position,CellType.Road).Count <= 0)
         {
             Debug.Log("Must be placed near a road");
+            textRoad.text = "Must be placed near a road";
             return false;
         }
         return true;
