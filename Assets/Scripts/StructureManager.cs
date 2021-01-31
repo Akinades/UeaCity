@@ -27,16 +27,18 @@ public class StructureManager : MonoBehaviour
     }
     public void placeService(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position))
+        if (CheckPositionBeforePlacement(position) )
         {
            // int randomIndex = GetRandomWeightedIndex(serviceWeights);
-            if(uIController.OderService == 1 )
+            if(uIController.OderService == 1 && GameApplicationManager.Instance.Money > 7500)
             {
+                GameApplicationManager.Instance.reducemoney(7500); 
                 placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[0].prefab, CellType.Structure);
               
             }
-            if (uIController.OderService == 2)
+            if (uIController.OderService == 2 && GameApplicationManager.Instance.Money > 7000)
             {
+                GameApplicationManager.Instance.reducemoney(7000);
                 placementManager.PlaceObjectOnTheMap(position, ServicePrfabe[1].prefab, CellType.Structure);
                
 
@@ -72,7 +74,7 @@ public class StructureManager : MonoBehaviour
     }
     public void placeHouse(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position))
+        if (CheckPositionBeforePlacement(position) )
         {
             //int randomIndex = GetRandomWeightedIndex(houseWeights);
              GameApplicationManager.Instance.houseCount++;
@@ -93,7 +95,7 @@ public class StructureManager : MonoBehaviour
 
     public void placeFarm(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position)  && GameApplicationManager.Instance.FarmCount < 2)
+        if (CheckPositionBeforePlacement(position)  && GameApplicationManager.Instance.FarmCount < 2 && GameApplicationManager.Instance.Money > 1000)
         {
             
                 GameApplicationManager.Instance.addFarm(1);
@@ -109,9 +111,10 @@ public class StructureManager : MonoBehaviour
     }
     public void placePark(Vector3Int position)
     {
-        if (CheckPositionBeforePlacement(position))
+        if (CheckPositionBeforePlacement(position) && GameApplicationManager.Instance.Money > 7500)
         {
             //int randomIndex = GetRandomWeightedIndex(parkWeights);
+            GameApplicationManager.Instance.reducemoney(7500); 
             placementManager.PlaceObjectOnTheMap(position, ParkPrefabe[0].prefab, CellType.Structure);
          
             AudioPlayer.instance.PlayPlacementSound();
