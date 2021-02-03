@@ -46,6 +46,10 @@ public class StructureManager : MonoBehaviour
                
 
             }
+            else
+            {
+                textRoad.text = "Not enough money!!! ";
+            }
             AudioPlayer.instance.PlayPlacementSound();
         }
             
@@ -71,7 +75,11 @@ public class StructureManager : MonoBehaviour
                 placementManager.PlaceObjectOnTheMap(position, FactoryPrefabe[2].prefab, CellType.Structure);
                 
             }
-           
+            else
+            {
+                textRoad.text = "Not enough money!!! ";
+            }
+
             AudioPlayer.instance.PlayPlacementSound();
         }
     }
@@ -111,9 +119,15 @@ public class StructureManager : MonoBehaviour
             
             //int randomIndex = GetRandomWeightedIndex(gradenWeights);
           
-          
+            
             AudioPlayer.instance.PlayPlacementSound();
+        }else
+        {
+            textRoad.text = "Not enough or your level is lower "; 
         }
+       
+
+        
     }
     public void placePark(Vector3Int position)
     {
@@ -124,6 +138,9 @@ public class StructureManager : MonoBehaviour
             placementManager.PlaceObjectOnTheMap(position, ParkPrefabe[0].prefab, CellType.Structure);
          
             AudioPlayer.instance.PlayPlacementSound();
+        }else
+        {
+            textRoad.text = "Not enough money!!! ";
         }
     }
     

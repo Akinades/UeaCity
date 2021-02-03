@@ -40,9 +40,8 @@ public class Detial_house : MonoBehaviour
         textElec.text = "Electric : " + homestate.electricpower + "/5";
         textWater.text = "Water : " + homestate.Hydroenergy + "/5";
         textPeople.text = "People : " + homestate.people;
-        textsecurity.text = "Security : " + homestate.PercentSafty + "%";
-        textFanciness.text = "Fanciness : " + homestate.fanciness + "%";
-        textLevel.text = "House Lv. " + homestate.level;
+      
+       
 
 
 
@@ -60,7 +59,7 @@ public class Detial_house : MonoBehaviour
     public void UpgradeLevel_2()
     {
         //Level 2
-        if (wood.count >= 1)
+        if (wood.count >= 1 && homestate.level == 1)
         {
             homestate.level = 2;
             StorageSystem.instance.Reduce(wood, 1);
@@ -136,8 +135,10 @@ public class Detial_house : MonoBehaviour
     {
 
         woodneeded[0].text = " " + wood.count + "/1";
-       
-        
+        textLevel.text = "House Lv. " + homestate.level;
+        textsecurity.text = "Security : " + homestate.PercentSafty + "%";
+        textFanciness.text = "Fanciness : " + homestate.fanciness + "%";
+
 
         if (Input.GetMouseButtonDown(0))
         {
