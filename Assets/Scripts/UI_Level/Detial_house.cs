@@ -9,8 +9,8 @@ public class Detial_house : MonoBehaviour
     //public bool OnDetail = true;
     public StructureManager structureManager;
     public Button DeleteButton;
-    public Button Uplevel_2;
-    public Button Uplevel_3;
+    public Button Uplevel;
+   
    
     public Vector3Int position;
      Homestate homestate;
@@ -18,22 +18,24 @@ public class Detial_house : MonoBehaviour
     public Text[] woodneeded;
     public Item wood ,iron;
 
-    
+    //Change Model
+    public MeshFilter Newhosue;
+    public Mesh meshLelve_2 , meshLevel_3; 
 
     // Start is called before the first frame update
     void Start()
     {
         //add money
         GameApplicationManager.Instance.addmoney(100);
-        StorageSystem.instance.Reduce(wood, 1); 
+        StorageSystem.instance.Reduce(wood, 1);
         //add people
-       // GameApplicationManager.Instance.addPeople(10);
-
-        homestate = GetComponent<Homestate>();
+        // GameApplicationManager.Instance.addPeople(10);
+        MeshFilter Newhosue = GetComponent<MeshFilter>(); 
+         homestate = GetComponent<Homestate>();
        Button btn = DeleteButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        Uplevel_2.onClick.AddListener(UpgradeLevel_2);
-        Uplevel_3.onClick.AddListener(UpgradeLevel_3);
+        Uplevel.onClick.AddListener(UpgradeLevel);
+       
 
         textFood.text = "Foods : " + homestate.rice + "/5";
         texthealth.text = "Heath : " + homestate.PercentHealth + "%";
@@ -56,8 +58,10 @@ public class Detial_house : MonoBehaviour
     }
 
 
-    public void UpgradeLevel_2()
+    public void UpgradeLevel()
     {
+
+        
         //Level 2
         if (wood.count >= 1 && homestate.level == 1)
         {
@@ -78,19 +82,12 @@ public class Detial_house : MonoBehaviour
             GameApplicationManager.Instance.addPeople(5);
             GameApplicationManager.Instance.addmoney(350);
 
+            Newhosue.mesh = meshLelve_2;
 
 
         }
-        else
-        {
-            Debug.Log("Can't Upgrade");
-        }
-    }
-
-    public void UpgradeLevel_3()
-    {
         //Level 3
-        if (wood.count >= 1 && iron.count >= 1 && homestate.level == 2)
+        else if (wood.count >= 1 && iron.count >= 1 && homestate.level == 2)
         {
             homestate.level = 3;
             StorageSystem.instance.Reduce(wood, 1);
@@ -108,12 +105,17 @@ public class Detial_house : MonoBehaviour
             textLevel.text = "House Lv. Max";
             GameApplicationManager.Instance.addPeople(5);
             GameApplicationManager.Instance.addmoney(500);
+          
+            Newhosue.mesh = meshLevel_3;
+
         }
         else
         {
             Debug.Log("Can't Upgrade");
         }
     }
+
+    
 
 
 
@@ -139,6 +141,7 @@ public class Detial_house : MonoBehaviour
         textsecurity.text = "Security : " + homestate.PercentSafty + "%";
         textFanciness.text = "Fanciness : " + homestate.fanciness + "%";
 
+        
 
         if (Input.GetMouseButtonDown(0))
         {

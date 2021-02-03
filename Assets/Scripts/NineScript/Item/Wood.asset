@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Wood
   icon: {fileID: 21300000, guid: 99d6be39be22f8f43b5a263b542be177, type: 3}
-  count: 5
+  count: 979
   Object: {fileID: 3302720815791297562, guid: 520491f6a45d11546b2c28f52447f86c, type: 3}
