@@ -7,9 +7,9 @@ public class Building_UI : MonoBehaviour
 {
     public Animator buildingUI;
     public GameObject buildObject; 
-    public bool buildON = false;
+     bool buildON = false;
     public Button buildClick;
-    public int ClickCount = 0;
+     int ClickCount = 0;
     // Start is called before the first frame update
 
     void Start()
